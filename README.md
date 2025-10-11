@@ -1,7 +1,7 @@
 # WIRED
 Repo sencillo para estudiantes de Ingenieria en Computacion/CS. (De uso personal para aprendizaje en el uso de git/GitHub)
 
-Si deseas clonar las notas:
+> Si deseas clonar las notas:
 
 ```bash
 git clone https://github.com/wakuroshi/WIRED.git
