@@ -17,6 +17,8 @@ cd WIRED
 
 ## ESTRUCTURA
 (En construccion)
+
+```plaintext
 WIRED/
 ├── Estadistica/
 ├── Estructuras Logicas/
@@ -27,6 +29,7 @@ WIRED/
     ├── Java/
     ├── C/
     └── ...
+```
 
 ## Software recomendado
 - Obsidian + Latex plugin 
