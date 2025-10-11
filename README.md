@@ -9,27 +9,26 @@ cd WIRED
 ```
 
 ## TODO
-[ ] Definir una template flexible y simple para todas o la mayoria de notas.
-[ ] Pulir formato markdown.
-[ ] Añadir proyectos simples en distintos lenguajes.
-[ ] Añadir calculo, fisica, y expandir re-estructurar programacion para enfoque por-lenguaje.
-[ ] Imagenes y diagramas sencillos
+- [ ] Definir una template flexible y simple para todas o la mayoria de notas.
+- [ ] Pulir formato markdown.
+- [ ] Añadir proyectos simples en distintos lenguajes.
+- [ ] Añadir calculo, fisica, y expandir re-estructurar programacion para enfoque por-lenguaje.
+- [ ] Imagenes y diagramas sencillos
 
 ## ESTRUCTURA
+(En construccion)
 WIRED/
-|
-|->Estadistica/
-|->Estructuras Logicas/
-|->Fundamentos de la Electronica/
-|->Logica/
-|->Programacion/
-    | (TODO)
-    |->Python
-    |->Java
-    |->C
-    |->...
+├── Estadistica/
+├── Estructuras Logicas/
+├── Fundamentos de la Electronica/
+├── Logica/
+└── Programacion/
+    ├── Python/
+    ├── Java/
+    ├── C/
+    └── ...
 
 ## Software recomendado
-Obsidian + Latex plugin 
-Editor de texto (nvim, helix, etc)
-PDF viewer (zathura, okular, etc)
+- Obsidian + Latex plugin 
+- Editor de texto (nvim, helix, etc)
+- PDF viewer (zathura, okular, etc)
