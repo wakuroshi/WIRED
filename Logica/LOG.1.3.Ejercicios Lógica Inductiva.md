@@ -1,6 +1,6 @@
 # Primer ejercicio
 En la siguiente secuencia de figuras ¿Cuál es el número total de trapecios rectangulares que conforman la figura 10?
-![[Ejercicio lógica trapecios.png|400]]
+![[LOG.1.2.fa.png|400]]
 **a)** 32
 **b)** 60
 **c)** 81
@@ -26,7 +26,7 @@ Que en la figura 10 se traduce como 64, es decir, el resultado es la opción **d
 
 # Segundo Ejercicio
 Determina el número de círculos en blanco
-![[Ejercicio lógica círculos en blanco.png]]
+![[LOG.1.2.fb.png]]
 **a)** 900
 **b)** 1024
 **c)** 929
@@ -57,7 +57,7 @@ Qué reemplazando el caso n por 29 se destaca que $P(29)= 929$, es decir, el res
 
 # Ejercicio 3
 Hallar el triángulo de la figura 225.
-![[Pasted image 20251013070456.png]]
+![[LOG.1.2.fc.png]]
 En la figura se observa como en:
 $F_{1}$= 1
 $F_{2}$= 3
@@ -66,4 +66,4 @@ Esta sucesión son todos los números impares, podría escribirse como $F(n)= 2n
 $F_{1}$= 1
 $F_{2}$= 4
 $F_{3}=9$
-Se ve fácilmente que la suma de todos los impares son todos los cuadrados, es decir, $P(n)=n²$, por lo que $P(229)=229² =52441$.
+Se ve fácilmente que la suma de todos los impares son todos los cuadrados, es decir, $P(n)=n²$, por lo que $P(225)=255² =50625$.
