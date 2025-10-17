@@ -38,20 +38,21 @@ F = G
 
 ## Unión de Conjuntos
 Sean A y B dos conjuntos cualesquiera se denomina unión de los conjuntos A y B, al conjunto formado por los elementos de A o B se denota así: A $\cup$ B
+
 ![[Union de conjuntos]]
 
 ## Intersección de Conjuntos
 Sean A y B dos conjuntos cualesquiera se denomina a intersección de los conjuntos A y B al conjunto formado por los elementos de A y B. Se denota así: A $\cap$ B 
-![[Interseccion]]
+![[Interseccion.png]]
 ## Diferencia entre conjuntos 
 Sean A y B dos conjuntos cualesquiera se denomina a diferencia de conjuntos A y B, Al conjunto Formado por los elementos de A que no están en B. Se denota: A - B  
-![[Diferencia]]
+![[Diferencia.png]]
 ## Complemento de un conjunto con respecto a otro 
 Sea el conjunto universal N y A un subconjunto de N. Se denomina complemento de A con respecto a N, al conjunto de los elementos de N que no están en A se denota así:  $A^c$ 
-![[Complemento de un conjunto con respecto a otro]]
+![[Complemento de un conjunto con respecto a otro.png]]
 ## Diferencia simétrica entre conjuntos
 Sean A y B dos conjuntos cualesquiera, se denomina diferencia simétrica de los conjuntos A y B, al conjunto (A - B) $\cup$ (B - A). Se denota así: A $\Delta$ B
-![[Diferencia Simétrica]]
+![[Diferencia Simétrica.png]]
 ## Conjuntos Numéricos
 Los conjuntos numérico agrupan números según sus características comunes, siendo los principales los Naturales($\mathbb{N}$) que abarcan desde el 1 al $\infty$ , Enteros($\mathbb{Z}$) que abarcan los naturales, cero y el -$\infty$, Racionales($\mathbb{Q}$) que abarca los números enteros y las fracciones y decimales, Irracionales($\mathbb{I}$) que abarcan los números no exactos como puede ser  $\pi$ o $\sqrt{2}$, Los Reales($\mathbb{R}$) que abarcan tanto los Racionales como los irracionales y los números complejos($\mathbb{}$) que abarcan a los reales y a los imaginarios
-![[Conjuntos Numericos]]
+![[Conjuntos Numericos.png]]

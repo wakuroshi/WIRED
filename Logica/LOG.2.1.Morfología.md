@@ -17,7 +17,7 @@ Forma correcta del lenguaje formal
 	Cualquier variable proposicional es una fórmula. P: Es una fórmula
 
 **2) Regla de Negación (Operador Unario).**
-	Si A es una fórmula, $\neg A$ también lo es.
+	Si A es una proposición, $\neg A$ también lo es.
 
 **3) Reglas Binarias (Operadores Diádicos)**
 	Si A y B son fórmulas, entonces ($A\land B$), ($A\lor B$), ($\neg A\land B$) también.

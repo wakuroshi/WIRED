@@ -1,0 +1,3 @@
+- Reutilización
+- Orden
+- Asignación de 
