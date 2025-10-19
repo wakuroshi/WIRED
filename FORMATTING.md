@@ -25,12 +25,12 @@ ABC.x.y.z.Titulo:
 ### 1.1.2. Nombre de los archivos de media y scripts
 Siguen una estructura igual a la de las notas, pero cambiando el Titulo por el descriptor (si es script o archivo media) y su localizacion (primer archivo de media, segundo, etc). ABC.x.y.z.**fa** o ABC.x.y.z.**sa**:
 
-- **fa**: El descriptor **f** hace referencia a *figura*, pero por simplicidad se utiliza para describir el hecho de que el archivo es de media (.png, .gif, .jpg, etc), la letra **a** se refiere a que es la primera *figura* dentro de esa nota, similar a como se hace referencia a diagramas en un libro de ciencias. Ej: [Interseccion](MAT.1.1.fb.png) hace referencia a que la imagen, que representa una Interseccion, esta en la nota *MAT.1.1* y es la **segunda figura** (fb) de esta nota.
+- **fa**: El descriptor **f** hace referencia a *figura*, pero por simplicidad se utiliza para describir el hecho de que el archivo es de media (.png, .gif, .jpg, etc), la letra **a** se refiere a que es la primera *figura* dentro de esa nota, similar a como se hace referencia a diagramas en un libro de ciencias. Ej: [Interseccion](./Media/CALI.1.1.fc.png) *CALI.1.1.fc* hace referencia a que la imagen, que representa una Interseccion, esta en la nota *CALI.1.1* y es la **tercera figura** (fc) de esta nota.
 - **sa**: Exactamente igual al de media, pero el descriptor **s** indica que es un script, y la letra **a** indica que es el script usado para generar la primera *figura* de esa nota.
 
 > Nota: Por favor dejar un espacio en blanco de por medio entre una imagen y el texto que la rodea, asi la imagen se renderiza sin ningun error por tener el texto justo debajo.
 
-Ejemplo completo de una nota: [LOG.1.Logica](LOG.1.Logica.md) 
+Ejemplo completo de una nota: [LOG.1.1.Logica](./Logica/LOG.1.1.Logica.md) 
 # 2. Estilo de escritura
 
 - Frases concisas, claras.  
