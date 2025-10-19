@@ -21,3 +21,6 @@ $$
 $$
 - Realice el histograma de frecuencia del salón A
 - Combine todos los datos y dibuje el histograma de frecuencias con una amplitud de 4 para cada intervalo
+
+Promedio de los datos
+$x = \frac{\sum x_i * fi}{\sum N}$

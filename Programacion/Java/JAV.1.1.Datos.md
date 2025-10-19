@@ -1,4 +1,5 @@
 # 1. Tipos de Datos en Java
+Para saber mas respecto a los tipos de datos en general, ir a [[ESL.1.2.Tipos de Datos]]
 ## 1.1 Tipos Primitivos
 - **Enteros**
 ```java
@@ -54,9 +55,9 @@ String texto2 = String.valueOf(numero);
 | Tipo                   | Valor Default |
 | ---------------------- | ------------- |
 | byte, short, int, long | 0             |
-|char	|'\u0000'|
-|boolean	|false|
-|Object|	null|
+| char                   | '\u0000'      |
+| boolean                | false         |
+| Object                 | null          |
 
 # 2. Operaciones Basicas
 ## 2.1 Aritmeticas
@@ -86,4 +87,5 @@ boolean not = (!a);
 Java tiene tipos primitivos (byte, int, float, char, boolean) y tipos  referencia (String, arrays, objetos). Los primitivos tienen valores por defecto y se almacenan directamente, mientras las referencias almacenan direcciones a objetos. 
 
 Soporta casting implicito y explicito para conversion entre tipos.
+
 

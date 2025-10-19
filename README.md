@@ -1,45 +1,46 @@
 # WIRED
-Repo sencillo para estudiantes de Ingenieria en Computacion/CS. (De uso personal para aprendizaje en el uso de git/GitHub)
 
-## Clonacion y contribucion:
+Repositorio de apuntes para estudiantes de Ingenieria en Computacion/CS. Iniciado con el fin principal del aprendizaje en el uso de Git, y la colaboracion entre estudiantes.
+
+## Contenido
+
+- **Apuntes organizados** por materias.
+- **Ejemplos y ejercicios** en multiples contenidos.  
+- **Recursos educativos** con referencias externas y cruzadas (internas).
+- **Formato nativo** con sintaxis markdown basica, para su facil lectura y edicion en editores.
+
+## Estructura Principal
+
+```
+WIRED/
+├── Estadistica/
+├── Estructuras-Logicas/
+├── Fundamentos-Electronica/
+├── Logica/
+└── Programacion/
+    └──Java/
+```
+
+## Comenzar
+
+Puedes clonar el repositorio:
 
 ```bash
 git clone https://github.com/wakuroshi/WIRED.git
 cd WIRED
 ```
-```bash
-git pull origin main 
-git checkout -b mi-rama-descriptiva
-git add .
-git commit -m "Descripción clara del aporte"
-git push origin mi-rama-descriptiva
-```
-Luego crear el Pull Request en GitHub (describiendo los cambios, de todos modos pasa por revision) para que sea aprobado.
+Y listo, tendras todas las notas en tu dispositivo.
 
-## TODO
-- [ ] Definir una template flexible y simple para todas o la mayoria de notas.
-- [ ] Pulir formato markdown.
-- [ ] Añadir proyectos simples en distintos lenguajes.
-- [ ] Añadir calculo, fisica, y expandir re-estructurar programacion para enfoque por-lenguaje.
-- [ ] Imagenes y diagramas sencillos
+## Guias
 
-## ESTRUCTURA
-(En construccion)
+- [CONTRIBUTING.md](CONTRIBUTING.md) - Como contribuir
+- [FORMATTING.md](FORMATTING.md) - Formato de archivos  
+- [TEMPLATE.md](TEMPLATE.md) - Plantilla para notas
+- [GlobalIndex.md](GlobalIndex.md) - Indice completo
 
-```plaintext
-WIRED/
-├── Estadistica/
-├── Estructuras Logicas/
-├── Fundamentos de la Electronica/
-├── Logica/
-└── Programacion/ (TODO)
-    ├── Python/
-    ├── Java/
-    ├── C/
-    └── ...
-```
+## Herramientas Recomendadas
 
-## Software recomendado
-- Obsidian + Latex plugin 
-- Editor de texto (nvim, helix, etc)
-- PDF viewer (zathura, okular, etc)
+- Obsidian + LaTeX
+- Editor de texto (nvim, Helix, etc.)
+- Git
+- PDF Viewer (Zathura, Okular, etc.)

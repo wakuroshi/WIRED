@@ -1,6 +1,6 @@
 # 1. Historia y Evolucion del Software
 ## 1.2 Linea de Tiempo del Desarrollo de Software
-### 1.2.1 1940-1960: Los Inicios
+### 1.2.1. 1940-1960: Los Inicios
 - Las primeras computadoras se programaban directamente desde el hardware
 - Uso de placas perforadas que indicaban operaciones logicas especificas
 - Implementacion de los primeros lenguajes de programacion como .asm (Assembly, se debe procesar por un ensamblador)
@@ -63,5 +63,5 @@
 - Conectividad omnipresente
 - Inteligencia artificial aplicada
 ---
-Resumen
+# Resumen
 El software evoluciono desde programacion a nivel de hardware en los  1940s hasta los lenguajes de alto nivel modernos. La crisis del software en los 1970s revelo la necesidad de metodologias estructuradas y de ingenieria formal. La evolucion incluyo paradigmas como programacion estructurada, orientada a objetos y funcional, transformando radicalmente la sociedad y la economia global.

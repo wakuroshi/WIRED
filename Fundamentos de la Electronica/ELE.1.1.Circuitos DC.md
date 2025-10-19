@@ -10,6 +10,9 @@ Materiales según su Conductividad:
 - **Aislantes:** Oponen alta resistencia al flujo de corriente (ej: goma, plástico).
 
 ## 1.2 Potencial Electrico y Tension
+El **potencial electrico** $v$ en un punto de una red es la **energia potencial por unidad de carga** de una carga colocada en ese punto.
+> El nivel cero del potencial electrico es arbitrario, solamente tienen significado fisico las diferencias de la energia potencial
+
 **La diferencia de potencial o tension** entre dos puntos A y B en un circuito es el trabajo realizado para mover la carga entre estos 2 punto.
 
 > 	La notacion es $V$, o $u$ en Europa
@@ -153,11 +156,3 @@ La misma red puede ser reemplazada por un circuito equivalente formado por:
 
 Relación: $V_{Th} = I_N \cdot R_{Th}$ y $R_N = R_{Th}$.
 
-6. Circuitos de Corriente Senoidal Alterna (CA)
-La corriente y tensión varían sinusoidalmente en el tiempo.
-
-Se introduce el concepto de Impedancia ($Z$): Generalización de la resistencia para CA. Mide la oposición total (resistencia + reactancia) al paso de la corriente.
-
-Admitancia ($Y$): Recíproco de la impedancia ($Y = \frac{1}{Z}$). Mide la facilidad al paso de la corriente.
-
-Ángulo de Carga o Fase ($\phi$): Diferencia de fase entre la tensión y la corriente. Determina el factor de potencia.
