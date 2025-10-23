@@ -6,3 +6,5 @@ Este indice recopila todos los temas y subtemas de la programacion en el lenguaj
 [Tipos de Datos en Java](JAV.1.1.Datos.md)
 [Arreglos y Hash](JAV.1.2.Arrays.md)
 [Bucles for y Recorrido de Matrices](JAV.1.3.Bucles.md)
+[Herencia](JAV.2.1.Herencia)
+
