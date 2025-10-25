@@ -59,15 +59,15 @@ Las tablas de la verdad son herramientas logicas que muestran todos los posibles
 ### 1.2.2. Ejemplo: $(P \wedge Q) \rightarrow R$
 
 | $P$ | $Q$ | $R$ | $P \wedge Q$ | $(P \wedge Q) \rightarrow R$ |
-|-----|-----|-----|--------------|-----------------------------|
-| V   | V   | V   | V            | V                           |
-| V   | V   | F   | V            | F                           |
-| V   | F   | V   | F            | V                           |
-| V   | F   | F   | F            | V                           |
-| F   | V   | V   | F            | V                           |
-| F   | V   | F   | F            | V                           |
-| F   | F   | V   | F            | V                           |
-| F   | F   | F   | F            | V                           |
+| --- | --- | --- | ------------ | ---------------------------- |
+| V   | V   | V   | V            | V                            |
+| V   | V   | F   | V            | F                            |
+| V   | F   | V   | F            | V                            |
+| V   | F   | F   | F            | V                            |
+| F   | V   | V   | F            | V                            |
+| F   | V   | F   | F            | V                            |
+| F   | F   | V   | F            | V                            |
+| F   | F   | F   | F            | V                            |
 
 # 2. Arboles de Formacion
 

@@ -22,12 +22,51 @@ Operador de fuerza($\land$)
 # Ejercicio 2
 Dados los polinomios, calcular:
 
-| Polinomio | Pregunta |
-|:----------|:---------|
-| $P(x)=4x^2-1$ | $a) P(x)+Q(x)=x^3+x^2+6x-3$ |
-| $Q(x)= x^3 -3x^2+6x-2$ | $b) P(x)-U(x)=3x^2-3$ |
-| $R(x)=6x^2+x+1$ | $c) P(x)+R(x)= 10x^2+x$ |
-| $S(x)=\frac{1}{2}x^2+4$ | $d) 2P(x)-R(x)=IND$ |
+| Polinomio               | Pregunta                    |
+| :---------------------- | :-------------------------- |
+| $P(x)=4x^2-1$           | $a) P(x)+Q(x)=x^3+x^2+6x-3$ |
+| $Q(x)= x^3 -3x^2+6x-2$  | $b) P(x)-U(x)=3x^2-3$       |
+| $R(x)=6x^2+x+1$         | $c) P(x)+R(x)= 10x^2+x$     |
+| $S(x)=\frac{1}{2}x^2+4$ | $d) 2P(x)-R(x)=IND$         |
 | $T(x)=\frac{3}{2}x^2+5$ | $e) S(x)+T(x)+U(x)=3x^2+11$ |
-| $U(x)=x^2+2$ | $f) S(x)-T(x)+U(x)=11$ |# Investigar
+| $U(x)=x^2+2$            | $f) S(x)-T(x)+U(x)=1$       |
+Sea P, Q, U, R, S, T una fórmula
+##### Primera pregunta
+a) $P \land Q$ es proposición y $Q\land P$ es una proposición
+b) Si $P\land Q$ es una fórmula, $\neg(P\land Q)$ también lo es
+c) Si el problema es matemático se realiza, de lo contrario, se descompone si son atómicas o compuestas $P(x)+Q(x)=x^3+x^2+6x-3$
+d) Al cumplirse todas las reglas, es una FBF
+##### Segunda pregunta
+a) $P\land \neg U$ es proposición y $\neg U \land P$ también lo es 
+b) $P\land \neg U$ es proposición y $\neg(P\land\neg U)$
+c) $P(x)+(-U(x))$
+ d) Cumple todas las reglas de la FBF
+##### Tercera pregunta
+$Z=\prescript{2}{}P$
+a) $Z\land R$ y $R\land Z$
+b)$\neg (Z\land R)$
+c) Ind
+d) No se cumplen todas las FBF
+##### Cuarta pregunta
+Se puede decir que $S(x)+T(x)=W$
+para justificar su existencia se aplican las FBF
+1. $S\land T$ y $T\land S$
+2. $\neg (S\land T)$
+3.  $2x²+9$
+4. Se cumplen todas las FBF
 
+a) $W\land U$ y $U\land W$
+b) $\neg(W\land U)$
+c) $3x²+11$
+d) Se cumplen todas las FBF
+##### Quinta pregunta
+Se puede decir que $S(x)-T(x)=V$ 
+1. $S\land \neg T$  y $\neg T \land S$
+2. $\neg(S\land \neg T)$
+3. $-x²-1$
+4. Se cumplen todas las FBF
+
+a) $V\land U$ y $U\land V$
+b) $\neg(V\land Q)$
+c) $1$
+d) Se cumplen todas las FBF
