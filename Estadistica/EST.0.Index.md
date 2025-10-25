@@ -6,3 +6,4 @@ Este indice recopila todos los temas y subtemas de la materia **Estadistica**, e
 [Estadistica Probabilistica y Descriptiva](EST.1.1.Estadistica.md)
 [Graficas Estadisticas](<EST.1.2.Graficas Estadisticas.md>)
 [Ejercicios de Graficas Estadisticas](EST.1.2.1.Ejercicios.md)
+[Ejercicios Medida de tendencia central](<EST.1.3.Media Mediana Moda>)
