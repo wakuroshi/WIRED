@@ -12,5 +12,6 @@ Este indice recopila todos los temas y subtemas de la materia **Logica**, en ord
 [Ejercicios FBF](LOG.2.1.1.Ejercicios.md)
 [Tablas de Verdad y Arboles de Formacion](<LOG.2.2.Tablas de verdad.md>)
 [Ejercicios Morfologia](<LOG.2.2.1.Ejercicios Morfologia>)
+[Tablas de Verdad](<LOG.2.3.Tablas de Verdad>)
 
 
