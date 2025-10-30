@@ -26,7 +26,7 @@ d) Morfología
 - Reglas
 e) Verdadero o falso
 ## Tercera pregunta
-Siete semanas estudié y siete exámenes rendí. Si hubiese rendido solo tres exámenes, habría podido estudiar con más calma. Si hubiese tenido que rendir nueve exámenes no habría podido estudiar siete semanas. Rendí siete exámenes porque solo de esa manera podría terminar todos mis ramos y si los termino todos, entones me iré feliz de vacaciones. Estudié siete semanas solo para irme feliz de vacaciones.
+Siete semanas estudié y siete exámenes rendí. Si hubiese rendido solo tres exámenes, habría podido estudiar con más calma. Si hubiese tenido que rendir nueve exámenes no habría podido estudiar siete semanas. Rendí siete exámenes porque solo de esa manera podría terminar todos mis ramos y si los termino todos, entonces me iré feliz de vacaciones. Estudié siete semanas solo para irme feliz de vacaciones.
 a) Convertir y descomponer
 b) Proceso inductivo
 c) Proceso deductivo
