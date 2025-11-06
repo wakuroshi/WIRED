@@ -1,3 +1,15 @@
+---
+tags:
+- Index
+- Calculo
+- Estadistica
+- EstructurasLogicas
+- FundamentosElectronica
+- LabFisica
+- Logica 
+- Programacion
+---
+
 # Indice Global para las Materias
 
 |Materia|Prefijo|Index|

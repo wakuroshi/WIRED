@@ -1,4 +1,9 @@
-# 1. Instrumentos de Medición Eléctrica
+---
+tags:
+- Electronica
+---
+
+# 1. Instrumentos de Medición Eléctrica]
 
 Los instrumentos eléctricos permiten medir magnitudes como corriente, voltaje, resistencia, potencia y energía.  
 Es fundamental conocer su principio de funcionamiento, sus características y la forma correcta de conexión en el circuito.
@@ -112,7 +117,7 @@ El análisis de redes eléctricas lineales se realiza mediante **modelos de puer
 Tienen **dos terminales** (un par de entrada/salida).  
 Ejemplos: circuitos equivalentes de Thévenin y Norton, filtros simples RC o RL.
 
-### Representación general
+### 2.1.1. Representación general
 
 $$
 Z_{eq} = \frac{V}{I}
@@ -125,7 +130,7 @@ $$
 Y_{eq} = \frac{I}{V} = \frac{1}{Z_{eq}}
 $$
 
-### Asociación de redes
+### 2.1.2. Asociación de redes
 
 | Tipo de conexión | Relación |
 |:--|:--|
@@ -137,7 +142,7 @@ $$
 Tienen **cuatro terminales**, organizados como dos pares: entrada $(V_1, I_1)$ y salida $(V_2, I_2)$.  
 Se utilizan para modelar **amplificadores, filtros, líneas de transmisión, transformadores, etc.**
 
-### Representación matricial general
+### 2.2.1. Representación matricial general
 
 $$
 \begin{bmatrix} V_1 \\ V_2 \end{bmatrix}

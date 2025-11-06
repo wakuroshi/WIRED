@@ -1,3 +1,9 @@
+---
+tags:
+- Electronica
+- Index
+---
+
 # Indice — Fundamentos de la Electronica
 
 Este indice recopila todos los temas y subtemas de la materia **Fundamentos de Electronica**, en orden de estudio.  

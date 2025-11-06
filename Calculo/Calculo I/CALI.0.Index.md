@@ -1,4 +1,4 @@
-# Indice — Calculo I
+# [X] Indice — Calculo I
 
 Este indice recopila todos los temas y subtemas de la materia **Calculo I**, en orden de estudio.  
 

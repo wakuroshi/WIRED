@@ -1,4 +1,10 @@
-# Indice — Java
+---
+tags:
+- Index
+- Programacion/Java
+---
+
+# Indice — Programacion/Java
 
 Este indice recopila todos los temas y subtemas de la programacion en el lenguaje **Java**, en orden de estudio.  
 

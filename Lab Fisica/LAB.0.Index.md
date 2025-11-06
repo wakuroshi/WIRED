@@ -1,3 +1,9 @@
+---
+tags:
+- LabFisica
+- Index
+---
+
 # Indice — Laboratorio de Física
 
 Este indice recopila todos los temas y subtemas de la materia **Laboratorio de Física**, en orden de estudio.  

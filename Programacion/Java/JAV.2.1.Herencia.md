@@ -1,10 +1,21 @@
+---
+tags:
+- Programacion/Java
+---
+
+# JAV.1.1.Herencia
+
 # 1. Herencia
+
 Modela un objeto según la clase padre
--  UN agente es un empleado
+- Un agente es un empleado
 - Un carro es un vehículo
 - Un cuadrado es una figura geométrica
+
 ## 1.1. Caso de Herencia
+
 ![Caso Herencia!](JAV.2.1.fa.png)
+
 ## 1.1. Elementos Clave y Sintaxis
 
 | Concepto       | Nombre Común             | Definición                                  | Sintaxis                            |
@@ -12,6 +23,7 @@ Modela un objeto según la clase padre
 | Clase Base     | Superclase - Clase padre | Clase que se proporciona atributos, métodos | Public class Empleado{}<br>}        |
 | Clase Derivada | Subclase - Clase hija    | Clase que se hereda de la clase base        | Public class extends Empleado{<br>} |
 | Palabra Clave  | Extender                 | Palabra clave que establece la herencia     |                                     |
+
 ```java
 public class Empleado{
   private String id;

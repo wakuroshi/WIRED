@@ -1,3 +1,10 @@
+---
+tags:
+- Electronica
+---
+
+# ELE.1.2.Corriente AC
+
 # 1. Corriente Alterna (AC)
 
 La corriente alterna (AC) es una corriente eléctrica cuyo valor varía periódicamente en el tiempo.  
@@ -63,7 +70,9 @@ $$
 v(t) = V_m \cos(\omega t + \theta) \quad \Longleftrightarrow \quad \mathbf{V} = V_{rms} \angle \theta
 $$
 
-$$\land$$
+$$
+\land
+$$
 
 $$
 i(t) = I_m \cos(\omega t + \phi) \quad \Longleftrightarrow \quad \mathbf{I} = I_{rms} \angle \phi
@@ -165,6 +174,7 @@ $$
 $$
 
 Al valor $\sqrt{2}Ye^{j \phi}$ Se le denomina **fasor** 
+
 ## 1.8. Operaciones con fasores
 
 **Ley de Ohm en forma fasorial:**

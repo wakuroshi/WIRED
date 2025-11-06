@@ -1,4 +1,10 @@
+---
+tags:
+- Logica
+---
+
 # Ejercicio 1
+
 En la siguiente secuencia de figuras ¿Cuál es el número total de trapecios rectangulares que conforman la figura 10?
 
 ![LOG.1.3.fa](LOG.1.3.fa.png)
@@ -13,8 +19,8 @@ Primero se ve la diferencias de trapecios rectangulares, hay que tener en cuenta
 
 En la primera visiblemente es 1, ahora se dará el ejemplo para la segunda figura para entender el modo de conteo, se tienen 2 como figura individual, si se combinan ambas son 3 y si se combinan y se juntan con el paralelogramo. Es decir, se cuenta individualmente las de la izquierda y sus combinaciones, todas las posibles. Por lo que podría decirse que la diferencia son:
 
-1, 4, 8, 13
-1 ->4 = 3 ; 4->8=4, 8->13=5
+$1, 4, 8, 13$
+$1 \rightarrow 4 = 3 ; 4 \rightarrow 8 = 4, 8 \rightarrow 13=5$
 
 Se observa una progresión, se podría seguir para tener una diferencia de uno y aplicar el método de encontrar el polinomio p(n)=An² + Bn + C, sin embargo, en este caso se observa que $a_n - a_{n-1}=  n + 1$, porque aumenta cada vez 1, comenzando en 1, por ejemplo, $n=2: a_{2}−a_{1}=4−1=3; n+1=3$.
 

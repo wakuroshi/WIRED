@@ -1,12 +1,22 @@
+---
+tags:
+- Logica
+---
+
 # 1. Razonamiento
+ 
 El razonamiento se refiere al proceso mediante el cual se utiliza la logica y pensamiento para analizar, interpretar, deducir e inferir hechos, estableciendo conexiones casuales y conectivos entre ellos.
+
 ## 1.1. Razonamiento deductivo
+
 Parte de principios generales para llegar a conclusiones especificas. Si las premisas son verdaderas, la conclusion es necesariamente verdadera.
 
 ## 1.2. Razonamiento inductivo (Logica inductiva)
+
 Parte de observaciones particulares para establecer conclusiones generales. La conclusion no es necesariamente verdadera, pero es probable segun la evidencia disponible.
 
 ### 1.2.1. Caracteristicas de la logica inductiva:
+
 - Basada en patrones observados
 - Conclusiones probabilisticas
 - Fundamenta el metodo cientifico
@@ -15,6 +25,7 @@ Parte de observaciones particulares para establecer conclusiones generales. La c
 ### 1.2.2. Ejemplos
 
 **Ejemplo 1**:
+
 - $P_{1}$: Vi un cuervo negro
 - $P_{2}$: Los cuervos del parque eran negros
 - $P_{3}$: Sobre el techo de mi casa se poso un cuervo negro
@@ -22,6 +33,7 @@ Parte de observaciones particulares para establecer conclusiones generales. La c
 Se determina entonces por herencia que la PG (**Proposicion General**) es que todos los cuervos son negros
 
 **Ejemplo 2**:
+
 - $A_{1}$: EL atardecer llega en la tarde
 - $A_{2}$: Los ocasos se dan en el atardecer
 - $A_{3}$: El anochecer llega despues del atardecer
@@ -29,6 +41,7 @@ Se determina entonces por herencia que la PG (**Proposicion General**) es que to
 **PG**: Entre el atardecer y el anochecer ocurre el ocaso
 
 **Ejemplo 3:**
+
 Siendo ($S$) Sal, ($A$) Agua, ($D$) Disolver:
 
 A: Siempre que uno $A$ con $S$ se disuelve (Es proposicion) 
@@ -40,9 +53,10 @@ E: No quiero que se disuelva la sal con agua (No es proposicion)
 **Solucion general**: Siempre que la sal y el agua se mezcla se disuelve
 
 ## Ejemplo 4
-P1: $(4*1<2^1) \rightarrow (4<1)$ F
-P2: $(4*2<2^2) \rightarrow (8<4)$ F
-P3: $(4*3<2^3) \rightarrow (4<8)$ Discrepancia con P2
+
+$P_1$: $(4*1<2^1) \rightarrow (4<1)$ F
+$P_2$: $(4*2<2^2) \rightarrow (8<4)$ F
+$P_3$: $(4*3<2^3) \rightarrow (4<8)$ Discrepancia con P2
 
 **PG**: $(4>1) \land (4<8)$
 
@@ -50,33 +64,34 @@ P3: $(4*3<2^3) \rightarrow (4<8)$ Discrepancia con P2
 
 Siendo $P$:Ingenieria y $Q$:Ciencia
 
-P1: La ingenieria es una ciencia $(P \rightarrow Q)$ F
-P2: La ingenieria esta basada en las ciencias $(Q \rightarrow P)$ V
-P3: La ingenieria necesitan la ingenieria $(Q \leftrightarrow P)$ F
-P4: La ingenieria es mejor que las ciencias $(P>Q)$ F
-P5: No se necesita ser ingeniero para estudiar ciencias (No es proposicion)
-P6: NO es una ciencia tener una ingenieria (No es proposicion)
+$P_1$$: La ingenieria es una ciencia $(P \rightarrow Q)$ F
+$P_2$: La ingenieria esta basada en las ciencias $(Q \rightarrow P)$ V
+$P_3$: La ingenieria necesitan la ingenieria $(Q \leftrightarrow P)$ F
+$P_4$: La ingenieria es mejor que las ciencias $(P>Q)$ F
+$P_5$: No se necesita ser ingeniero para estudiar ciencias (No es proposicion)
+$P_6$: NO es una ciencia tener una ingenieria (No es proposicion)
 
 **Solucion general**: La ingenieria depende de la ciencia, pero no es una ciencia
 
 Un cuadrado se parte en 4 cuadros, uno de los cuadrados se parte en otros 4 cuadros y asi sucesivamente, despues de 69 particiones, ¿cuantos cuadros en total hay?
 
-**A)** 276
+**A)** 277
 **B)** 257
 **C)** 384
 **D)** 387
 **E)** 761
 
-5+(4*68)
+![Figura del Ejemplo](../Media/LOG.1.2.fa.png)
 
-2 -> 14 -> 54 -> 128
+Se sigue la secuencia:
 
-7*2 = 14
+$5 \rightarrow 9 \rightarrow 13$
 
-27*2
-3*3*3*2 = 54
+Es decir:
 
-2^6= 128
+$1+4(n) \rightarrow 1+4(69) = 277$
+
+La respuesta correcta es la **A**
 
 Dada la secuencia de la figura hallar x+y
 
@@ -93,40 +108,81 @@ d)729
 e)809
 
 Sacando la diferencia entre cada fila:
+
 3->5 hay 2, de 5->9 hay 4...
 
 Entonces:
-$5-3=2;9-5=4;15-9=6 \dots 15=9+6=9+8-2$ $$\therefore a_n=a_{n-1} +2n - 2$$
+
+$5-3=2;9-5=4;15-9=6 \dots 15=9+6=9+8-2$ 
+$$
+\therefore a_n=a_{n-1} +2n - 2
+$$
+
 Donde cada paso tiene una separacion de $2n$
 
-Pero no sirve porque tendria que conocer $a_{n-1}$ para cada caso $a_n$, se puede generalizar la formula a terminos n-simos para evitar sucesiones
-$$a_n=a_{n-1} +2n - 2 \rightarrow (a_n - a_{n-1} = 2n - 2) \in n \geq 2$$
-$$a_n =a_1 \sum_{i=1}^{n-1}(a_{i+1}-a_i)$$ 
+Pero no sirve porque se tendria que conocer $a_{n-1}$ para cada caso $a_n$, se puede generalizar la formula a terminos n-simos para evitar sucesiones:
+
+$$
+a_n=a_{n-1} +2n - 2 \rightarrow (a_n - a_{n-1} = 2n - 2) \in n \geq 2
+$$
+
+$$
+a_n =a_1 \sum_{i=1}^{n-1}(a_{i+1}-a_i)
+$$
+
 Donde $a_{i+1}-a_i$ representa la diferencia entre cada fila, entonces se simplifica a $2i$
-$$a_n = 3 + \sum_{i=1}^{n-1}2n=3+2 \cdot \sum_{i=1}^{n-1}i$$
-Por sumatoria de Gauss: $$\sum_{i=1}^{n} i= 1+2+3+4+\dots+n=\frac{n(n+1)}{2}$$
-$$\therefore \sum_{i=1}^{n-1}i = \frac{(i-1)i}{2} \rightarrow a_n = 3 + 2 \cdot \frac{(i-1)i}{2}=3+(i-1)i$$
+
+$$
+a_n = 3 + \sum_{i=1}^{n-1}2n=3+2 \cdot \sum_{i=1}^{n-1}i
+$$
+
+Por sumatoria de Gauss: 
+
+$$
+\sum_{i=1}^{n} i= 1+2+3+4+\dots+n=\frac{n(n+1)}{2}
+$$
+
+$$
+\therefore \sum_{i=1}^{n-1}i = \frac{(i-1)i}{2} \rightarrow a_n = 3 + 2 \cdot \frac{(i-1)i}{2}=3+(i-1)i
+$$
+
 Relacion entre primer termino y ultimo termino de cada fila:
+
 $F2=7; 7=5+2$
 $F3=13; 13=9+4=9+2+2$
 $F4=21; 21=15+6=15+2+2+2$
+
 Entonces $b_n = a_n +2n - 2=3+(n-1)n +2n -2= n^2+n+1$
+
 $x+y=a_n+b_n=3+n^2-n + n^2+n+1$
-$$x+y=2n^2 + 4$$
+
+$$
+x+y=2n^2 + 4
+$$
 
 Y despues de probar con todas las opciones la unica que da un numero exacto de fila es la a):
-$$x+y=804; 2n^2=804$$
-$$2n^2=800$$
-$$n^2=400$$
-$$n=20$$
+$$
+x+y=804; 2n^2=804
+$$
+
+$$
+2n^2=800
+$$
+
+$$
+n^2=400
+$$
+
+$$
+n=20
+$$
 
 ---
+
 # Resumen 
-Diferencias clave
+
+**Diferencias clave**:
+
 - **Deduccion**: De lo general a lo particular (certeza logica)
 
 - **Induccion**: De lo particular a lo general (probabilidad empirica)
-
-
-
-
