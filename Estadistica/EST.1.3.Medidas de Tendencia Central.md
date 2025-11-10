@@ -1,8 +1,7 @@
 ---
 tags:
-- Estadistica
+  - Estadistica
 ---
-
 # EST.1.3.Media Mediana y Moda
 
 Estos 3 valores representan las [Medidas de Tendencia Central](./EST.1.1.Estadistica.md), utiles para visualizar facilmente la distribucion y promedio de los datos rapidamente.

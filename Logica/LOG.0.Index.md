@@ -3,8 +3,7 @@ tags:
 - Logica
 - Index
 ---
-
-# Indice — Logica
+# Indice — Lógica
 
 Este indice recopila todos los temas y subtemas de la materia **Logica**, en orden de estudio.  
 
@@ -14,10 +13,15 @@ Este indice recopila todos los temas y subtemas de la materia **Logica**, en ord
 [Ejercicios Logica Inductiva](./LOG.1.3.Ejercicios.md)
 
 ## LOG.2 - Morfologia y Semantica
-[Formulas Bien Formadas (FBF) y Convenciones](./LOG.2.1.Morfologia.md)
-[Ejercicios FBF](./LOG.2.1.1.Ejercicios.md)
-[Tablas de Verdad y Arboles de Formacion](<./LOG.2.2.Tablas de verdad.md>)
-[Ejercicios Morfologia](<./LOG.2.2.1.Ejercicios Morfologia>)
-[Tablas de Verdad](<./LOG.2.3.Tablas de Verdad>)
-[Arbol de Formacion](<./LOG.2.4.Arboles de Formacion>)
+[Formulas Bien Formadas (FBF) y Convenciones](<./LOG.2.1.Morfologia.md>)
+[Ejercicios FBF](<./LOG.2.2.Ejercicios.md>)
+[Tablas de Verdad y Arboles de Formacion](<./LOG.2.4.Tablas de Verdad.md>)
+[Ejercicios Morfologia](<./LOG.2.3.Ejercicios Morfologia.md>)
+[Tablas de Verdad](<./LOG.2.4.Tablas de Verdad.md>)
+[Arbol de Formacion](<./LOG.2.5.Arboles de Formacion.md>)
+[Herramientas Lógicas](<./LOG.2.6.Herramientas Logicas.md>)
+
+## LOG.3.Lógica Semántica
+[Lógica Semántica](<./LOG.3.1.Semantica>)
+[Ejercicios Lógica Semántica](<./LOG.3.2.Leyes Logicas.md>)
 
