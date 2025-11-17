@@ -24,4 +24,4 @@ Este indice recopila todos los temas y subtemas de la materia **Logica**, en ord
 ## LOG.3.Lógica Semántica
 [Lógica Semántica](<./LOG.3.1.Semantica>)
 [Ejercicios Lógica Semántica](<./LOG.3.2.Leyes Logicas.md>)
-
+[Interpretaciones de Fórmulas](<./LOG.3.3.Interpretaciones de Formulas>)
