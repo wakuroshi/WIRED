@@ -14,3 +14,5 @@ Este indice recopila todos los temas y subtemas de la materia **Estadistica**, e
 
 ## EST.2 — Análisis de Datos Estadísticos
 [Medidas de Dispersión y Posición](<./EST.2.1.Medidas de Dispersion y Posicion>)
+[Ejercicios Medidas de Dispersión y Posición](<./EST.2.2.Ejercicio Medidas de Posicion y Dispersion>)
+[Estimación de Parámetros](<./EST.2.3.Estimacion de Parametros>)
