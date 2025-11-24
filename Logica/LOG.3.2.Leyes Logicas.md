@@ -129,6 +129,21 @@ En cada una de las siguientes formas proposicionales encontrar equivalentes util
 	$\neg \neg[\neg P \lor (\neg Q\lor R)]$ Doble negación
 	$\neg[P \land \neg(\neg Q\lor R)]$ De Morgan
 	$\neg(P \land  Q\land \neg R)$ De Morgan
+
+**Tabla de la Verdad**
+
+| $\neg$ | (P  | $\land$ | Q   | $\land$ | $\neg$ | R)  |
+| ------ | --- | ------- | --- | ------- | ------ | --- |
+|        | V   |         | V   |         | F      | V   |
+|        | V   |         | V   |         | V      | F   |
+|        | V   |         | F   |         | F      | V   |
+|        | V   |         | F   |         | V      | F   |
+|        | F   |         | V   |         | F      | V   |
+|        | F   |         | V   |         | V      | F   |
+|        | F   |         | F   |         | F      | V   |
+|        | F   |         | F   |         | V      | F   |
+
+**Árbol de Formación**
 ### 3.2.Ejercicio 2
 Simplificar las siguientes expresiones, escribirlas utilizando los conectivos $\lor$ y $\rightarrow$
 1) $(P\land \neg Q)\land \neg P$
