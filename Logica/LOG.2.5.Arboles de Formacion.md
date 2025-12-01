@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 1.¿Qué son?
 Los árboles de formación muestran como se construyen una Fórmula Bien Formada (FBF) paso a paso, revelando la jerarquía de los conectores. La raíz (la punta superior) del árbol presenta la fórmula completa y el conector más cercano a la raíz es el conector principal
 

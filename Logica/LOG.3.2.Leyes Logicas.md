@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 1.¿Qué son?
 Son principios fundamentales que proporcionan equivalencias o implicaciones entre fórmulas lógicas, permitiendo simplificar expresiones, estas definen las propiedades básicas de los conectores lógicas y como herramientas simplifican mucho el análisis de las proposiciones.
 # 2.Leyes Lógicas

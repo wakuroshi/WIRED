@@ -1,3 +1,7 @@
+---
+tags:
+  - Estadistica
+---
 # 1. Definición
 Es el proceso que se utiliza para conocer las características de un parámetro poblacional mediante el conocimiento de la muestra. Esto permite que con una muestra tamaño *n* se pueda inferir en el valor del parámetro de una población.
 **Conceptos fundamentales:**

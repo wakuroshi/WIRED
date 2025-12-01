@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 1. Tablas de la Verdad
 
 Las tablas de la verdad son herramientas logicas que muestran todos los posibles valores de verdad de una proposicion compuesta, basandose en los valores de sus componentes atomicos.

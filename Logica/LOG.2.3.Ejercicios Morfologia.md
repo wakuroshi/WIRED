@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 ## Primera pregunta
 Si pienso, me doy cuenta de que existo. De hecho, solo sé que existo porque pienso. Si no pienso, no puedo dar cuenta de las cosas ni del mundo que me rodea. Si no puedo dar cuenta del mundo que me rodea, entonces no puedo conocer cosa alguna y tampoco puedo ubicarme en el tiempo y el espacio. Por eso es importante saber que pienso y que existo. La negación de ambas cosas implica la negación de mi mismo.
 

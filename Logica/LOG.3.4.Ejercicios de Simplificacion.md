@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 1.Ejercicio 1
 Escribe las siguientes expresiones lógicas utilizando los conectivos $\land, \ \lor, \ \neg$ para resolverlos usa tabla de la verdad y/o árboles de formación
 
@@ -72,7 +76,7 @@ Término medio M = Divisible entre 2
 Término mayor S = 180°
 Término menor P = Triángulo rectángulo
 Término medio M = Triángulo
-![[WIRED/Media/LOG.3.4.fb.png]]
+![[../Media/LOG.3.4.fb.png]]
 **Modo C**
 1) Ninguna matriz singular es invertible 
 2) Algunas matrices invertibles son triangulares

@@ -27,3 +27,5 @@ Este indice recopila todos los temas y subtemas de la materia **Logica**, en ord
 [Interpretaciones de Fórmulas](<./LOG.3.3.Interpretaciones de Formulas>)
 [Ejercicios Simplificación de Proposiciones](<./LOG.3.4.Ejercicios de Simplificacion>)
 
+## LOG.4.Pruebas Formales
+[Pruebas Formales](<LOG.4.1.Pruebas Formales>)

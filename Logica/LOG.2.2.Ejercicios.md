@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # Ejercicio 1
 **Dadas las proposiciones:**
 $P$: Jhon Von Neuman diseñó la arquitectura del CPU

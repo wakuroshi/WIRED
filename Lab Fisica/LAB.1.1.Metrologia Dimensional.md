@@ -1,3 +1,7 @@
+---
+tags:
+  - LabFisica
+---
 # LAB.1.1.Metrologia Dimensional 
 
 La Metrología Dimensional es la rama de la metrología que se ocupa de la medición de las magnitudes físicas relacionadas con la geometría de un objeto: longitud, ángulo, forma, planitud, redondez, etc. Su objetivo fundamental es asegurar que las piezas y componentes manufacturados cumplan con las dimensiones y tolerancias especificadas en los planos de diseño, garantizando así la intercambiabilidad, la calidad y el funcionamiento correcto de los productos.
