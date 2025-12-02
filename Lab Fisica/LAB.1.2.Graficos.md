@@ -1,3 +1,7 @@
+---
+tags:
+  - LabFisica
+---
 ## 1.Definición
 Son una representación de algo. Permiten facilitar la interpretación de la información de manera visual.
 

@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 1.Interpretaciones de Fórmulas
 Ej: Sea $F=(p\lor q)\land(\neg q\lor R)$
 	Valor de F en interpretación $I_{1}$ tal que

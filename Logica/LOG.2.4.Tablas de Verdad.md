@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 1. Definición
 Método de semántica lógica
 - **Estructura:** Lista todas las posibles soluciones. Combinaciones de valores de verdad.

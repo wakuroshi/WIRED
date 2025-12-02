@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 1. Morfologia
 Es la parte de la logica que estudia la **forma y estructura** en como se presentan las proposiciones (Estructuras logicas).
 

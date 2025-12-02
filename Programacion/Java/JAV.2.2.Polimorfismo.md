@@ -1,3 +1,8 @@
+---
+tags:
+  - Programacion/Java
+  - Programacion
+---
 # 1. Sobreescritura
 Se le llama sobreescritura al usarse en la clase hija un mismo método que en la clase padre, el método posee el mismo nombre que el de la clase padre, pero se sobreescritura (denotado con @Override) y permite que se modifique el comportamiento del método en la clase hija. **Ejemplo:**
 ```java

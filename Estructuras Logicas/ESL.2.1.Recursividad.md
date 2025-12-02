@@ -1,3 +1,7 @@
+---
+tags:
+  - EstructurasLogicas
+---
 # 1. ¿Qué es?
 Es una técnica de programación en la que una función se llama a sí misma para resolver e problema, dividiendolo en subproblemas más pequeños, cada vez que se llama a sí misma, trabaja en un subconjunto más pequeño del problema origina hasta alcanzar un estado base, lo que permite que la recursión termine.
 

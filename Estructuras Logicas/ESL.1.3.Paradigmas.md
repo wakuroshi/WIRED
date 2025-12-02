@@ -1,6 +1,6 @@
 ---
 tags:
-- EstrcturasLogicas
+  - EstructurasLogicas
 ---
 
 # ESL.1.3.Paradigmas

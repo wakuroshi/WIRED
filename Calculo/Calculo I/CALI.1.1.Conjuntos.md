@@ -1,3 +1,7 @@
+---
+tags:
+  - Calculo
+---
 # 1. Conjuntos 
 Un **Conjunto** es una colección de elementos bien definidos que comparten una característica o propiedad en común, en matemática un conjunto se suele usar para representar una colección de números, letras o figuras geométricas.
 

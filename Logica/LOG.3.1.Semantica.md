@@ -1,3 +1,7 @@
+---
+tags:
+  - Logica
+---
 # 0. Prólogo
 Ejercicio de clase anterior
 Hallar la suma de cifras de M:
@@ -93,7 +97,7 @@ Analizar la validez de los siguientes argumentos:
 3) Ningún número natural es entero
 	$\mathbb{N}=\{1,2,3,4,\dots\}$
 	$\mathbb{Z}=\{\dots, -3, -2, -1, 0, 1, 2, 3, \dots \}$
-	$\nexists \mathbb{N}: (N\in \mathbb{N}\land N \notin \mathbb{Z}$
+	$\nexists \mathbb{N}: (N\in \mathbb{N}\land N \notin \mathbb{Z})$
 	No existe número natural tal que N pertenezca a los naturales y N no pertenezca a los enteros
 		**Hipotesis:** $(5\in \mathbb{N})\rightarrow(5\not\in \mathbb{Z})$
 		- 5 pertenece a los naturales por definición $\mathbb{N}=\{1,2,\dots,5,\dots\}$ por lo que $(5\in \mathbb{N})$ es verdadero (V)
