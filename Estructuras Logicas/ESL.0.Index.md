@@ -16,3 +16,4 @@ Este indice recopila todos los temas y subtemas de la materia **Estructuras Lóg
 
 ## ESL.2.Manipulación de Estructuras
 [Recursividad](<./ESL.2.1.Recursividad>)
+[Punteros](<ESL.2.2.Punteros>)
