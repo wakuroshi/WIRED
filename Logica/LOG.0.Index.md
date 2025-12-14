@@ -30,3 +30,5 @@ Este indice recopila todos los temas y subtemas de la materia **Logica**, en ord
 ## LOG.4.Pruebas Formales
 [Pruebas Formales](<LOG.4.1.Pruebas Formales>)
 [Pseint](<LOG.4.2.Pseint>)
+[Ejercicios de Pruebas Formales](<LOG.4.3.Ejercicios de Pruebas Formales>)
+[Algoritmos Pseint](<LOG.4.4.Algoritmos>)

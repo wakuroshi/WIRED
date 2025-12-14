@@ -2,15 +2,11 @@
 tags:
   - EstructurasLogicas
 ---
-
 # ESL.1.3.Paradigmas
-
 # 1. Paradigmas de Programacion
-
 Un paradigma de programacion es un estilo fundamental para construir programas de computadora. Define como los programadores organizan el codigo y resuelven problemas.
 
 ## 1.1. Programacion Estructurada
-
 La programacion estructurada se basa en la organizacion del codigo en bloques logicos mediante funciones y procedimientos. Su principio fundamental es dividir programas complejos en partes mas pequenas y manejables.
 
 **Caracteristicas principales:**
