@@ -1,5 +1,6 @@
-# Tipos de Materiales 
-Existen 3 tipos de materiales que pueden conducir la electricidad y cada tiene resistividad que tiene que ser superada para que pueda conducir la electricidad.
+# ELE.2.1.Fisica del Semiconductor
+
+Existen 3 tipos de materiales que pueden conducir la electricidad y cada uno tiene un valor de **resistividad** que tiene que ser superado para que pueda conducir la electricidad.
 
 **Resistividad:** $r = (\Omega*m)$
 
@@ -14,7 +15,9 @@ Existen 3 tipos de materiales que pueden conducir la electricidad y cada tiene r
 - Conductores: Metales, Óxidos Metálicos y no metales conductivos.
 
 - Semiconductores: Silicio, Germano, Arseniuro de Galio y Carbono
-# Bandas de Energía (BE) 
+
+# 1. Bandas de Energía (BE) 
+
 Las BE representan los estados de energía permitidos para los electrones.
 
 - Banda de Valencia: Corresponde a la región llena, donde los electrones están débilmente enlazados al átomo.
@@ -24,7 +27,8 @@ Las BE representan los estados de energía permitidos para los electrones.
 - Banda Prohibida: Corresponde a la región entre las bandas de valencia y de conducción, donde no existen electrones libres.
 
 ![ELE.2.1.fa](ELE.2.1.fa.png)
-**OJO**: Esto es solo una representación gráfica de como se verían las bandas de energía, en realidad la banda prohibida representa cuanta energía necesita el electrón para pasar de la banda de valencia a la banda de conducción.
+
+> Esto es solo una representación gráfica de como se verían las bandas de energía, en realidad la banda prohibida representa cuanta energía necesita el electrón para pasar de la banda de valencia a la banda de conducción.
 
 Por otro parte, el nivel de energía de $E{v}$ representa la máxima energía permisible de un electrón en la banda de valencia y el nivel de energía de $E{c}$ representa la mínima energía disponible en la banda de conducción.
 

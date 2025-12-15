@@ -62,7 +62,7 @@ El bombo Mostrado tiene 8 pelotas. Calcule
 n=8, 4 verdes, 2 rojos, 2 blancos $E=\{5, 5, 5, 5, 6, 7, 1, 8\}$
 1. Probabilidad que:
 	a) Que salga 1 bola sin importar el número
-		La probabilidad es $\dfrac{1}{8}=0.125$, es decir, 12,5% 
+		La probabilidad es $\dfrac{8}{8}=1$, es decir, 100% (siempre se recoge una bola con un numero cualquiera porque todas lsa bolas tienen un numero asignado) 
 	b) Probabilidad que salga una bola marcada con el #5
 		$P=\dfrac{4}{8}=0.5=50\%$
 
