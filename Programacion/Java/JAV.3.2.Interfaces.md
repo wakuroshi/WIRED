@@ -4,7 +4,7 @@ tags:
   - Programacion/Java
 ---
 # 1.Definición
-Es una colección de métodos definidos, define el qué, más no el no cómo, asume un contrato, si se va a implementar la interfaz se le obliga a implementar los métodos de la interfaz, si no los implementa no compila. Las clases pueden implementar no solo una interfaz, pueden implementar varias interfaces. El rol de la interfaz no es el como, es el de servir como molde o esetructura.
+Es una colección de métodos definidos, define el qué, más no el no cómo, asume un contrato, si se va a implementar la interfaz se le obliga a implementar los métodos de la interfaz, si no los implementa no compila. Las clases pueden implementar no solo una interfaz, pueden implementar varias interfaces. El rol de la interfaz no es el como, es el de servir como molde o estructura.
 Apunta a un objeto e implementa la interfaz, en la interfaz no existe un constructor, no se crean objetos y no se definen atributos, solo se crearían constantes, las cuales no varían en las clases. 
 
 - **Abstracción:** El diseño de la interfaz no necesita detalles de la implementación. La referencia de la interfaz apunta a cualquier clase que cumple con el contrato.

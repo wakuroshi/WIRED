@@ -21,3 +21,8 @@ Este indice recopila todos los temas y subtemas de la materia **Estadistica**, e
 [Probabilidad](<./EST.3.1.Probabilidad>)
 [Tipos de Eventos](<EST.3.2.Tipos de Eventos.md>)
 [Distribuciones de Variables Discretas](<EST.3.3.Distribuciones de Variables Discretas>)
+[Ejercicios Distribuciones](<EST.3.3.Ejercicios de Distribuciones.md>)
+
+## EST.4 — Distribución de Variables Continuas
+[Distribución de Variables Continuas](<EST.4.1.Distribuciones de Variables Continuas>)
+[Ejercicios de Distribución Normal](<EST.4.2.Ejercicio de Distribución Normal>)
