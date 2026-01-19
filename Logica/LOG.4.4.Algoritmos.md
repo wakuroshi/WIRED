@@ -49,6 +49,7 @@ Algoritmo colores
 	FinPara
 FinAlgoritmo
 ```
+
 # 2.Algoritmo premisas
 Generar para premisas P, Q, R, S valores únicos que determinen 
 - Ecuación de $2^{do}$ grado

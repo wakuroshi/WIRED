@@ -14,10 +14,10 @@ El complemento de un evento A es el evento de que A no ocurra
 $P(A \cap B)=P(A)\cdot P(B)$
 Los eventos independientes siempre estarán relacionados con los reemplazos y se definen como la multiplicación de ambas probabilidades no excluyentes
 # 5.Eventos Condicionales
-$P(A / B)=\dfrac{P(A \cap B)}{P(A)}$ (La probabilidad de A dado B es la probabilidad de A o B entre la probabilidad de A)
-$P(B / A)=\dfrac{P(B \cap A)}{P(B)}$ (La probabilidad de B dado A es la probabilidad de B o A entre la probabilidad de B)
+$P(A / B)=\dfrac{P(A \cap B)}{P(B)}$ (La probabilidad de A dado B es la probabilidad de A o B entre la probabilidad de A)
+$P(B / A)=\dfrac{P(B \cap A)}{P(A)}$ (La probabilidad de B dado A es la probabilidad de B o A entre la probabilidad de B)
 # 6.Eventos Dependientes
-$P(A \cap B)=P(A) \cdot P(B / A)$
+$P(A \cap B)=P(A) \cdot P(B / A)$00000
 $P(B \cap A) = P(B) \cdot P(A / B)$
 
 # 7.Ejercicios

@@ -32,3 +32,9 @@ Este indice recopila todos los temas y subtemas de la materia **Logica**, en ord
 [Pseint](<LOG.4.2.Pseint>)
 [Ejercicios de Pruebas Formales](<LOG.4.3.Ejercicios de Pruebas Formales>)
 [Algoritmos Pseint](<LOG.4.4.Algoritmos>)
+[Construcción de Demostraciones Formales](<LOG.4.5.Construccion de Demostraciones Formales>)
+[Resumen de Ejercicios Sección 4](<LOG.4.6.Resumen Ejercicios por Demostración>)
+
+## LOG.5.Transformaciones Sintácticas
+[Preludio Transformaciones Sintácticas](<LOG.5.1.Transformaciones Sintácticas>)
+[Transformaciones Sintácticas](<LOG.5.2.Transformaciones Sintácticas>)

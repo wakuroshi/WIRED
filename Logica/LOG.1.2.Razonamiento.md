@@ -2,7 +2,6 @@
 tags:
 - Logica
 ---
-
 # 1. Razonamiento
  
 El razonamiento se refiere al proceso mediante el cual se utiliza la logica y pensamiento para analizar, interpretar, deducir e inferir hechos, estableciendo conexiones casuales y conectivos entre ellos.

@@ -85,13 +85,8 @@ int main(void) {
 ```
 Declara la estructura con struct llamada Nodo, se crea un alias de la estructura con typedef, si no se hiciera en cada que se menciona Nodo se debería usar la palabra "struct", es una estructura como colección de variables, similar a una plantilla.
 La estructura contiene espacio para un espacio entero y una referencia al siguiente valor como un puntero a otra estructura de tipo nodo.
- En la línea donde se declara la lista enlazada, se declara la variable de tipo puntero llamada "nuevoNodo" a un nodo, almacena la dirección de un objetio de tipo nodo, sizeof(Nodo) calcula la cantidad de bytes de memoria necesarios para almacenar un objeto de la estructura nodo, es decir, los bytes para int dato y para struct Nodo \*siguiente; 
- malloc(sizeof(Nodo)) es una función que asigna dinámicamente la memoria, reserva un bloque del tamaño exacto del Nodo, malloc devuelve la dirección de memoria de ese bloque reservado.
- (Nodo \*) es un casting (conversión explícita de tipos). La función malloc devuelve un puntero genérico tipo void\*, el casting convierte el puntero void\* a Nodo\*. Es decir, el puntero nuevoNodo se inicializa y se le asigna la dirección de memoria que devolvió malloc que es de tipo Nodo.
- 
- # 5.2.Algoritmo Nodos
- 
- ```C
+## 5.2.Algoritmo Nodos
+```C
 #include <stdio.h>
 #include <stdlib.h>
 typedef struct Nodo {
