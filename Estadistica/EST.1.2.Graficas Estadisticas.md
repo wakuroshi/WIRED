@@ -2,7 +2,7 @@
 tags: 
 - Estadistica
 ---
-#### [Ejercicios Graficas Estadisticas](./EST.1.2.1.Ejercicios.md)
+#### [Ejercicios Graficas Estadisticas](EST.1.2.1.Ejercicios.md)
 
 # 1. Diagramas de Barras
 

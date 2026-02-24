@@ -1,125 +1,79 @@
 ---
-tags:
-  - Estadistica
+materia: Estadística
+id: EST.1.2
+tema: Distribuciones de Frecuencia y Visualización de Alta Densidad
+status: Terminado
+tags: [frecuencias, histogramas, sturges, visualización, ingeniería]
 ---
-# EST.1.3.Media Mediana y Moda
 
-Estos 3 valores representan las [Medidas de Tendencia Central](./EST.1.1.Estadistica.md), utiles para visualizar facilmente la distribucion y promedio de los datos rapidamente.
+# EST.1.2. Distribuciones de Frecuencia y Visualización
 
-# 1. Procedimiento
+> [!abstract] El Análisis Exploratorio de Datos (EDA)
+> El primer paso de un ingeniero ante un dataset masivo no es calcular la media, sino entender cómo se distribuyen los datos. La visualización científica permite identificar patrones, lagunas en la recolección y la presencia de valores atípicos que podrían invalidar modelos futuros.
 
-1. Ordena de menor a mayor los datos
-2. Ubica la mediana (en el punto medio):
+---
 
-  - Si n es **par** $\rightarrow c_{1}= \dfrac{n}{2}$ y $c_{2}=\dfrac{n+1}{2}$ Ubicar el valor de los datos en donde se encuentran $c_{1}$ y $c_{2}$, y se calcula $\dfrac{c_{1}+c_{2}}{2}$ 
-	- Si n es **impar** $\rightarrow \dfrac{n+1}{2}$
- 
-3. **Moda**: El valor que más se repite en los datos
-4. **Media**: $\overline{x}=\dfrac{\sum{x_{i}}}{n}$
+# 1. Organización de Datos Agrupados (Discretización)
 
-## 1.1.Datos impares
+Cuando el tamaño de la muestra $n$ es considerable, la lista de datos brutos es inmanejable. Agrupamos los datos en **clases** o intervalos para observar la densidad.
 
-Las calificaciones finales de geometría analítica de n estudiantes son:
+### 1.1. Determinación Científica del Número de Clases ($K$)
+No debe ser arbitrario. Si $K$ es muy pequeño, perdemos la forma; si es muy grande, vemos ruido.
+- **Regla de Sturges:** $K = 1 + 3.322 \log_{10}(n)$. Es la base del software moderno, asumiendo una distribución aproximadamente normal.
+- **Regla de Scott:** $h = \frac{3.49s}{n^{1/3}}$ (donde $h$ es el ancho de clase). Más robusta que Sturges para datos con outliers.
+- **Regla de Freedman-Diaconis:** Utiliza el rango intercuartílico para definir el ancho, siendo menos sensible a valores extremos que la regla de Scott.
 
-$$
-\begin{matrix}
-68&84&75&82 \\
-73&79&88&73 \\
-61&65&62&70 \\
-66&86&80 \\
-96&78&67 \\
-79&78&73
-\end{matrix}
-$$
+### 1.2. Amplitud e Intervalos
+$$A = \frac{R}{K} = \frac{x_{max} - x_{min}}{K}$$
+- **Límites de Clase:** Deben definirse para evitar ambigüedad (usualmente cerrados por la izquierda y abiertos por la derecha: $[L_{inf}, L_{sup})$).
+- **Marca de Clase ($x_i$):** El punto medio del intervalo. $x_i = \frac{L_{inf} + L_{sup}}{2}$. Es el valor que representa a toda la clase en cálculos algebraicos.
 
-$\overline{x}=\dfrac{\sum{x_{i}}}{n}=\dfrac{1583}{21}=75,38$
+# 2. Tipos de Frecuencias: Formalismo Matemático
 
-$\text{Moda} = 73$
+Sea una partición del rango en $K$ clases:
 
-$\text{Mediana} = 75$
+1.  **Frecuencia Absoluta ($f_i$):** Conteo de observaciones en el intervalo $i$. Propiedad fundamental: $\sum_{i=1}^{K} f_i = n$.
+2.  **Frecuencia Relativa ($h_i$):** Proporción del total. $h_i = \frac{f_i}{n}$. Representa la probabilidad empírica de que un dato caiga en ese rango.
+3.  **Frecuencia Acumulada ($F_i$):** Suma parcial $\sum_{j=1}^{i} f_j$. Es la base para el cálculo de la Función de Distribución Acumulada (CDF) empírica.
 
-## 1.2. Datos pares
+# 3. Herramientas de Visualización Técnica
 
-Las calificaciones finales de geometría analítica de N estudiantes es:
+### 3.1. Histograma vs. Diagrama de Barras
+- El **Histograma** se usa para variables continuas. No hay espacio entre barras porque el eje X representa una escala numérica real.
+- **Densidad:** En un histograma riguroso, el eje Y debe representar la densidad ($h_i / A$), no solo la frecuencia, para que el área total del gráfico sea igual a 1.
 
-$$
-\begin{matrix}
-59&60&67&60&55 \\
-71&35&38&25&43 \\
-75&80&71&25&23 \\
-70&25&91&30&07
-\end{matrix}
-$$
 
-$\overline{x} = 50,5$
 
-$\text{Moda} = 25$
+[Image of Histogram vs Bar Chart comparison]
 
-$\text{Mediana}=57$
 
-## 1.3. Media Ponderada
+### 3.2. Ojiva (Gráfico de Frecuencia Acumulada)
+Gráfico lineal que une los puntos $(L_{sup, i}, F_i)$. 
+- **Utilidad:** Permite interpolar percentiles de forma visual. Es la herramienta principal para análisis de fiabilidad (ej. ¿qué porcentaje de motores fallan antes de las 1000 horas?).
 
-Las calificaciones finales de geometría analítica de N estudiantes es:
-Con la nota 3 hay 5 personas, con la nota 4 hay 6...
+### 3.3. Diagrama de Pareto
+Combinación de histograma ordenado de mayor a menor con una ojiva de porcentaje acumulado.
+- **Principio de Pareto (80/20):** En ingeniería de calidad, ayuda a identificar el 20% de las causas que generan el 80% de los defectos.
 
-| $x_i$ | $f_i$  | $x_if_i$ |
-| ---   | ------ | ----     |
-| 3     | 5      | 15       |
-| 4     | 6      | 24       |
-| 5     | 3      | 15       |
-| 6     | 2      | 12       |
-| 7     | 1      | 7        |
-| 8     | 4      | 32       |
-|       |        | 105      |
+### 3.4. Boxplot (Diagrama de Caja y Bigotes) de Tukey
+Representa la distribución mediante cinco estadísticos de posición (mínimo, $Q_1$, mediana, $Q_3$, máximo).
+- **Valla de Outliers:** Se define el Rango Intercuartílico $IQR = Q_3 - Q_1$. Cualquier dato $x < Q_1 - 1.5(IQR)$ o $x > Q_3 + 1.5(IQR)$ es un **outlier** candidato a ser investigado.
 
-Solo se hace con **media ponderada** si el número de datos agrupados **tiene frecuencia**
 
-$\text{Media} = \dfrac{\sum x_{i}f_{i}}{N}=\dfrac{105}{6}=17,5$
 
-$\text{Moda}= 4$
+# 4. Errores de Interpretación Gráfica
 
-$\text{Mediana }= c_{1}=\frac{6}{2}=3$ y $c_{2}=\frac{6+1}{2}=3,5=4$; por lo tanto, $\text{Mediana}=\dfrac{c_{1}+c_{2}}{2} = \dfrac{5+6}{2}=5,5$
+Un ingeniero debe evitar:
+- **Interpolación lineal en el histograma:** Los datos dentro de una clase se asumen distribuidos uniformemente, lo cual es solo una aproximación.
+- **Sesgo de Ancho de Clase:** Alterar $A$ para "forzar" que la distribución parezca normal o bimodal.
 
-## 1.4.Ejercicio empresa
+---
 
-Una empresa de investigación de mercado realiza una encuesta para conocer el número de productos comprados por los consumidores, los datos recolectados corresponder a 30 clientes, donde cada número representa la cantidad de productos adquiridos por un cliente específico. Calcule la medida de tendencia central para datos agrupados.
+## Resumen Técnico
+- La **Regla de Sturges** es un estándar, pero para muestras muy grandes ($n > 1000$), la regla de **Scott** es matemáticamente superior.
+- El **Boxplot** es preferible al histograma para comparar la variabilidad entre diferentes procesos o turnos de trabajo.
+- La **Marca de Clase** introduce un error de agrupamiento; a mayor $K$, menor error pero menor síntesis de información.
 
-$$
-\begin{matrix}
-25&18&22&20&15&25 \\
-18&35&28&9&28&30 \\
-30&8&29&27&34&38 \\
-24&40&35&36&31&41 \\
-32&36&43&44&53&50
-\end{matrix}
-$$
-
-[Para saber los datos necesarios para graficar](<EST.1.2.Graficas Estadisticas>)
-
-$\text{Mediana} = L_{i}+\left[\dfrac{\frac{n}{2}-F_{A-1}}{fi} \right]*A$, donde $F_{A}$ Es la frecuencia absoluta mediana, la cual se consigue dividiendo los datos (30 en este caso) entre 2, y se observa que contiene el número (el dato 3 en este caso), lo cual implica usar 7 como $F_{A-1}$, la amplitud es la amplitud de clase, en este caso, 8
-
-$\text{\# de clases}=1+3,33\log_{}n$
-
-$IC=\dfrac{Amp}{\text{\# de clases}}$
-
-$\overline{x}=\dfrac{\sum x_{i}f_{i}}{N}$
-
-Moda: valor de $f_{i}$ mayor
-
-# 1.4.1. Intervalos clase
-
-| #   | $IC$    | $LI$ | $LS$ | $f_i$ | $x_i$ | $\text{\%f}_i$ | $\text{F}$ | $\text{\%F}$ | $x_i f_i$ |
-| --- | ------- | ---  | ---  | ---   | ---   | -------        | ---        | -------      | -----     |
-| 1   | [8-16)  | 8    | 16   | 3     | 12    | 10.00%         | 3          | 10.00%       | 36        |
-| 2   | [16-24) | 16   | 24   | 4     | 20    | 13.33%         | 7          | 23.33%       | 80        |
-| 3   | [24-32) | 24   | 32   | 10    | 28    | 33.33%         | 17         | 56.67%       | 280       |
-| 4   | [32-40) | 32   | 40   | 7     | 36    | 23.33%         | 24         | 80.00%       | 252       |
-| 5   | [40-48) | 40   | 48   | 4     | 44    | 13.33%         | 28         | 93.33%       | 176       |
-| 6   | [48-56) | 48   | 56   | 2     | 52    | 6.67%          | 30         | 100.00%      | 104       |
-|     |         |      |      | 30    |       | 100.00%        |            |              | 928       |
-$\text{Amplitud} = 45$
-\# de clases = 6
-$IC = 8$
-Moda = 28
-$\overline{x}= \frac{\sum x_{i}f_{i}}{n}=30.93$
-$\text{Mediana} = 30,4$
+## Bibliografía
+- Tufte, E. R. - *The Visual Display of Quantitative Information*.
+- Tukey, J. W. - *Exploratory Data Analysis*.

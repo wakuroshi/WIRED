@@ -1,277 +1,100 @@
 ---
+materia: Estructuras Lógicas
+id: ESL.1.2
+tema: Tipos de Datos, Memoria y Estructuras
+status: Revision
 tags:
-- EstructurasLogicas
+  - EstructurasLogicas
+  - C
+  - arrays
+  - strings
+  - memoria
 ---
 
-# ESL.1.2.Tipos de Datos
+# ESL.1.2. Tipos de Datos: La Arquitectura de la Memoria
 
-# 1. Tipos de Datos en Programacion
+> [!abstract] Interpretando Bits
+> En la memoria RAM, todo son ceros y unos. Un "Tipo de Dato" es la máscara que le dice al compilador cómo interpretar esos bits (si es un número, una letra o una dirección) y cuánto espacio ocupar.
 
-Los tipos de datos definen el conjunto de valores que una variable puede almacenar y las operaciones que se pueden realizar con ellas. Son fundamentales para la asignacion de memoria y la validacion de operaciones.
+---
 
-# 2. Clasificacion de Tipos de Datos
+# 1. Tipos Primitivos (Escalares)
 
-## 2.1. Tipos Primitivos
+Son los bloques indivisibles de información. Su tamaño depende de la arquitectura (32 vs 64 bits), pero en ingeniería se asumen estándares.
 
-Tipos basicos proporcionados directamente por el lenguaje.
+### 1.1. Enteros
+- **char (1 byte):** Aunque se usa para caracteres ASCII, en realidad es un entero pequeño (-128 a 127).
+- **int (4 bytes):** El estándar para contadores.
+- **short (2 bytes):** Para ahorro de memoria.
+- **long long (8 bytes):** Para cifras astronómicas.
+- **unsigned:** Modificador vital en sistemas embebidos. Al eliminar los negativos, duplicamos el rango positivo. Ejemplo: `unsigned char` va de 0 a 255 (ideal para valores RGB).
 
-### 2.1.1. Enteros
+### 1.2. Punto Flotante (IEEE 754)
+Las computadoras no guardan decimales exactos, guardan una aproximación binaria.
+- **float (4 bytes):** Precisión simple.
+- **double (8 bytes):** Precisión doble.
+*Nota de Ingeniería:* Jamás uses `float` para dinero. Los errores de redondeo se acumulan.
 
-Almacenan numeros enteros sin parte decimal.
 
-**Ejemplo:**
+
+# 2. Arreglos (Arrays): Memoria Contigua
+
+Un arreglo es una secuencia de datos del mismo tipo ubicados uno tras otro en la RAM.
+- **Declaración:** `int numeros[5];`
+- **Acceso:** `numeros[0]` es el primero.
+- **Velocidad:** Acceso $O(1)$ (Inmediato). El compilador calcula la dirección así:
+  $$Dir = Base + (Indice \times SizeOf(Tipo))$$
+
+### 2.1. El peligro de los Arreglos en C
+C no verifica límites. Si escribes en `numeros[10]` de un arreglo de 5, sobrescribirás memoria de otra variable, causando comportamientos impredecibles o ataques de seguridad (Buffer Overflow).
+
+# 3. Cadenas de Caracteres (Strings)
+
+En C, **no existe el tipo String**. Existen arreglos de caracteres terminados en nulo.
+
+### 3.1. El Carácter Nulo (`\0`)
+Es un byte con valor 0. Marca el final del texto.
+```c
+char saludo[5] = {'H', 'o', 'l', 'a', '\0'};
+```
+Si olvidas el `\0`, funciones como `printf` seguirán leyendo basura de la memoria hasta que el programa colapse.
+
+### 3.2. Funciones de `<string.h>`
+- `strcpy(dest, src)`: Copia el contenido. No usar `=` para asignar strings.
+- `strcmp(s1, s2)`: Compara strings. Devuelve 0 si son iguales.
+- `strlen(s)`: Devuelve la longitud (sin contar el `\0`).
+
+# 4. Estructuras (Structs)
+
+Permiten crear tipos de datos personalizados agrupando variables de distinto tipo.
 
 ```c
-char c = 'A';
-short s = 1000;
-int i = 100000;
-long l = 1000000L;
-```
-
-### 2.1.2. Punto Flotante
-
-Almacenan numeros reales con parte decimal.
-
-**Ejemplo:**
-
-```c
-float f = 3.1416f;
-double d = 3.1415926535;
-```
-
-### 2.1.3. Caracter
-
-Almacenan un solo caracter.
-
-**Ejemplo:**
-
-```c
-char letra = 'A';
-char numero = '7';
-char simbolo = '$';
-```
-
-### 2.1.4. Booleano
-
-Almacenan valores verdadero o falso.
-
-**Ejemplo:**
-
-```java
-boolean esValido = true;
-boolean isEmpty = false;
-```
-
-### 2.2. Tipos Compuestos
-
-Estructuras que contienen multiples valores.
-
-### 2.2.1. Arreglos (Arrays)
-
-Coleccion de elementos del mismo tipo.
-
-**Ejemplo:**
-
-```c
-int numeros[5] = {1, 2, 3, 4, 5};
-char nombre[20] = "Juan";
-float temperaturas[7] = {20.5, 22.1, 19.8, 21.3, 23.0, 20.7, 19.5};
-```
-
-### 2.2.2. Cadenas (Strings)
-
-Secuencia de caracteres.
-
-**Ejemplo:**
-
-```c
-char saludo[] = "Hola Mundo";
-char nombre[50];
-```
-
-### 2.2.3. Estructuras (Structs)
-
-Agrupan datos de diferentes tipos.
-
-**Ejemplo:**
-
-```c
-struct Persona {
-    char nombre[50];
-    int edad;
-    float altura;
+struct Nodo {
+    int id;           // 4 bytes
+    char etiqueta[10];// 10 bytes
+    float valor;      // 4 bytes
 };
-
-struct Persona usuario;
-strcpy(usuario.nombre, "Maria");
-usuario.edad = 25;
-usuario.altura = 1.65;
 ```
 
-## 2.3. Tipos Derivados
+### 4.1. Alineación de Memoria (Padding)
+El procesador lee bloques de 4 u 8 bytes. Si declaras un `char` (1 byte) seguido de un `int` (4 bytes), el compilador insertará 3 bytes vacíos de "relleno" para que el `int` empiece en una dirección alineada. Esto es crucial saberlo al enviar datos por red.
 
-Se construyen a partir de otros tipos.
+# 5. Casting (Conversión de Tipos)
 
-### 2.3.1. Punteros
-
-Almacenan direcciones de memoria.
-
-**Ejemplo:**
-
+- **Implícito:** Automático. De `int` a `float`.
+- **Explícito:** Manual. De `float` a `int` (truncamiento).
 ```c
-int x = 10;
-int *ptr = &x;
-*ptr = 20;
-```
-
-### 2.3.2. Enumeraciones
-
-Conjunto de constantes con nombre.
-
-**Ejemplo:**
-
-```c
-enum DiaSemana { LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO, DOMINGO };
-enum DiaSemana hoy = MARTES;
-```
-
-## 2.4. Tipos Abstractos de Datos (TAD)
-
-Definen operaciones sin especificar implementacion.
-
-### 2.4.1. Listas
-
-Coleccion ordenada de elementos.
-
-**Ejemplo conceptual:**
-
-```
-Operaciones: insertar, eliminar, buscar, recorrer
-```
-
-### 2.4.2. Pilas (Stack)
-
-LIFO (Last In, First Out).
-
-**Ejemplo operaciones:**
-
-```java
-stack.push(elemento);
-stack.pop();
-stack.peek();
-```
-
-### 2.4.3. Colas (Queue)
-
-FIFO (First In, First Out).
-
-**Ejemplo operaciones:**
-
-```java
-queue.enqueue(elemento);
-queue.dequeue();
-queue.front();
-```
-
-# 3. Caracteristicas de los Tipos de Datos
-
-## 3.1. Tamaño en Memoria
-
-**Ejemplo:**
-
-```c
-printf("char: %zu bytes\n", sizeof(char));
-printf("int: %zu bytes\n", sizeof(int));
-printf("float: %zu bytes\n", sizeof(float));
-```
-
-## 3.2. Conversion de Tipos
-
-### 3.2.1. Implicita (Automatica)
-
-**Ejemplo:**
-
-```c
-int entero = 10;
-float decimal = entero;
-```
-
-### 3.2.2. Explicita (Casting)
-
-**Ejemplo:**
-
-```c
-float precio = 19.99;
-int precio_entero = (int)precio;
-```
-
-# 4. Eleccion del Tipo Adecuado
-
-## 4.1. Ejemplos Practicos
-
-**Para contadores:**
-
-```c
-unsigned int contador = 0;
-```
-
-**Para calculos financieros:**
-
-```java
-double saldo = 1234.56;
-```
-
-**Para banderas/estados:**
-
-```c
-bool estadoActivo = true;
-```
-
-## 4.2. Buenas Practicas
-
-**Nomenclatura:**
-
-```java
-int contadorEstudiantes;
-final double PI = 3.1416;
-```
-
-**Inicializacion:**
-
-```c
-int total = 0;
-char buffer[100] = {0};
-float promedio = 0.0f;
+void *ptr;
+int *pEntero = (int*)ptr; // Casting de puntero genérico a puntero a entero
 ```
 
 ---
 
-# Resumen
+## Resumen Técnico
+- Los **Arreglos** son rígidos en tamaño pero rápidos en acceso.
+- Las **Cadenas** requieren gestión manual de memoria y precaución extrema con el terminador nulo.
+- Las **Estructuras** son la base de la Programación Orientada a Objetos y de las estructuras de datos complejas.
 
-## Tipos Primitivos
-- **Enteros:** char, short, int, long
-- **Punto flotante:** float, double  
-- **Caracter:** char
-- **Booleano:** bool
-
-## Tipos Compuestos
-- **Arreglos:** Coleccion homogenea
-- **Cadenas:** Secuencia de caracteres
-- **Estructuras:** Agrupacion heterogenea
-
-## Tipos Derivados
-- **Punteros:** Direcciones de memoria
-- **Enumeraciones:** Constantes con nombre
-
-## Consideraciones Clave
-- Elegir tipo segun rango y precision requeridos
-- Inicializar siempre las variables
-- Usar casting explicito cuando sea necesario
-- Considerar el consumo de memoria
-- Validar rangos antes de operaciones criticas
-
-## Impacto en el Desarrollo
-- **Eficiencia:** Uso optimo de memoria
-- **Confiabilidad:** Prevencion de errores
-- **Mantenibilidad:** Codigo claro y comprensible
-- **Portabilidad:** Compatibilidad entre sistemas
+## Bibliografía
+- Kernighan, B. & Ritchie, D. - *The C Programming Language*.
+- Apuntes de clase Unidad 1.

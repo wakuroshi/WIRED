@@ -1,131 +1,92 @@
-# 1.Definición
-Es una variable especial que almacena la dirección de memoria de otra variable en lugar de guardar un valor directamente, actuando como una referencia que apunta a ese lugar en la memoria para manipular el dato original de forma eficiente. Cada dato posee una dirección en la memoria, un número, el puntero guarda ese dato. 
-Se declara con el tipo de dato seguido con un asterisco. Ej: int \*ptr; se usa & para obtener la dirección de una variable y se usa * sobre el puntero para modificar o leer el valor. Ej. \*ptr = 67;.
-# 2.Diferencia entre Punteros y Variables
-Una variable es un dato que se le asigna a una variable, un puntero es una variable que se le asigna a un espacio de memoria. Esto permite modificar ese espacio de memoria, reservar espacio de memoria y generar estructuras dinámicas mediante punteros que referencien a la estructura, como listas enlazadas.
-# 3.Reglas de Punteros
-1) El símbolo * se usa para definir tipo de puntero
-2) El símbolo & se usa para indicar la dirección de memoria de una variable
-3) El símbolo * se usa para acceder al valor de un puntero
-4) El símbolo & se usa para invocar a la función (se antepone a los parámetros de la función)
-5) En el cuerpo de la función los argumentos se usan con * (Puntero)
-6) El & solo se usa en el programa principal
-# 4.Ejemplo
-## 4.1.Algoritmo sin punteros
-```C
-#include <stdio.h>
-void intercambio(int x, int y) {
-  int z;
-  z = y; // No usa punteros, usa variables locales
-  x = y;
-  y = z;
-}
-
-int main(void) {
-  int a = 7, b = 8;
-  printf("a = %d, b = %d\n", a, b);
-  intercambio(a, b);
-  printf("a = %d, b = %d\n", a, b);
-  return 0;
-}
-```
 ---
-```Consola
-a = 7, b = 8
-a = 7, b = 8
-```
-No se modifica el valor debido a que la función intercambio usa variables locales, es decir, la función crea variables y las modifica, pero no afecta a las variables globales. 
-## 4.2.Algoritmo con punteros
-```C
-#include <stdio.h>
-void intercambio(int *x, int *y) {
-  int z; 
-  z = *x; // el asterisco referencia al valor de x
-  *x = *y; 
-  *y = z;
-}
-
-int main(void) {
-  int a = 7, b = 8;
-  printf("a = %d, b = %d\n", a, b);
-  intercambio(&a, &b);
-  printf("a = %d, b = %d\n", a, b);
-  return 0;
-}
-```
+materia: Estructuras Lógicas
+id: ESL.2.2
+tema: Punteros, Memoria Dinámica y Nodos
+status: Revision
+tags:
+  - EstructurasLogicas
+  - punteros
+  - malloc
+  - nodos
+  - C
 ---
-```Consola
-a = 7, b = 8
-a = 8, b = 7
-``` 
-Cuando se utilizan punteros en los argumentos de la función, cuando se modifican los valores, al final se está modificando ese espacio de memoria, es decir, el valor cambia de las variables globales debido a que es el espacio de memoria donde se encuentran alojadas.
 
-# 5.Lista Enlazada
-Esta es un tipo de estructura de datos lineal, poseen elementos llamados nodos y no se conectan de manera continua, estos elementos se conectan mediante punteros, referencias que apuntan al siguiente nodo formando una cadena, cada nodo contiene un dato y la dirección del siguiente mediante crecimiento dinámico facilitando inserciones y eliminaciones, sin embargo, recorrerla desde el inicio tiene un tiempo algorítmico de O(n).
-## 5.1.Estructura de la Lista Enlazada
-```C
-#include <stdio.h>
-#include <stdlib.h>
+# ESL.2.2. Punteros y Nodos: El Corazón de C
 
-int main(void) {
-  typedef struct Nodo {
-    int dato;
-    struct Nodo *siguiente;
-  } Nodo;
+> [!abstract] Acceso Directo
+> Un puntero es una variable que no guarda un valor, sino una **dirección de memoria**. Esto permite modificar variables a distancia, compartir datos grandes sin copiarlos y crear estructuras que cambian de tamaño.
 
-  Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo));
+---
 
-  if (nuevoNodo == NULL) {
-    printf("Error al asignar memoria.\n");
-  }
-  nuevoNodo->dato = 10;
-  nuevoNodo->siguiente = NULL;
-  return 0;
-}
+# 1. Sintaxis y Operadores
+
+### 1.1. Declaración
+```c
+int *ptr; // Puntero a un entero
 ```
-Declara la estructura con struct llamada Nodo, se crea un alias de la estructura con typedef, si no se hiciera en cada que se menciona Nodo se debería usar la palabra "struct", es una estructura como colección de variables, similar a una plantilla.
-La estructura contiene espacio para un espacio entero y una referencia al siguiente valor como un puntero a otra estructura de tipo nodo.
-## 5.2.Algoritmo Nodos
-```C
-#include <stdio.h>
-#include <stdlib.h>
+El asterisco aquí indica "tipo puntero".
+
+### 1.2. Operadores Clave
+- **`&` (Ampersand):** "La dirección de". Obtiene dónde vive una variable.
+- **`*` (Asterisco):** "Lo que hay en". Accede al valor apuntado (Desreferencia).
+
+```c
+int num = 10;
+int *p = &num; // p apunta a num
+*p = 20;       // num ahora vale 20
+```
+
+# 2. Memoria Dinámica (Heap vs Stack)
+
+Las variables normales viven en el Stack y mueren al terminar la función. Si queremos datos que sobrevivan o cuyo tamaño desconocemos al compilar, usamos el Heap.
+
+### 2.1. `malloc` (Memory Allocation)
+Pide bytes al sistema operativo.
+```c
+// Pide espacio para un entero
+int *p = (int*)malloc(sizeof(int)); 
+```
+
+### 2.2. `free` (Liberación)
+Crucial. En C no hay recolector de basura. Si no liberas, creas un **Memory Leak**.
+```c
+free(p); // Devuelve la memoria al sistema
+p = NULL; // Buena práctica para no dejar punteros colgantes
+```
+
+# 3. Estructuras de Nodos
+
+Los punteros permiten que un struct referencie a otro struct del mismo tipo.
+
+```c
 typedef struct Nodo {
-  int dato;
-  struct Nodo *sig;
+    int dato;
+    struct Nodo *siguiente; // Enlace al próximo nodo
 } Nodo;
+```
 
-int main() {
-  // Inicializamos los nodos
-  Nodo *frente = NULL;
-  Nodo *segundo = NULL;
-  Nodo *tercero = NULL;
+Esta es la base de las Listas Enlazadas. Los nodos no están juntos en memoria, están dispersos, pero conectados por estos punteros.
 
-  // Reservamos memoria
-  frente = (Nodo *)malloc(sizeof(Nodo));
-  segundo = (Nodo *)malloc(sizeof(Nodo));
-  tercero = (Nodo *)malloc(sizeof(Nodo));
+# 4. Aritmética de Punteros
 
-  // asignamos valores
-  frente->dato = 2;
-  segundo->dato = 4;
-  tercero->dato = 6;
+Los punteros son números (direcciones), así que se pueden sumar.
+- `ptr + 1`: No suma 1 byte, suma `sizeof(tipo)`.
+- Si `ptr` apunta a un `int` (4 bytes) en la dirección 1000, `ptr + 1` será la dirección 1004.
+- Esto es exactamente cómo funcionan los arreglos internamente. `arr[i]` es azúcar sintáctica para `*(arr + i)`.
 
-  // Enlazar los nodos
-  frente->sig = segundo;
-  segundo->sig = tercero;
-  tercero->sig = NULL;
+# 5. Errores Mortales en Ingeniería
 
-  // Imprimir lista recorriendo nodos
-  Nodo *n = frente;
-  while (n != NULL) {
-    printf("%i\t", n->dato);
-    n = n->sig;
-  }
-  return 0;
-}
- ```
+1.  **Segmentation Fault:** Intentar leer/escribir en memoria que no te pertenece (ej. un puntero `NULL` o no inicializado).
+2.  **Dangling Pointer:** Usar un puntero después de haber hecho `free` sobre él.
+3.  **Memory Leak:** Perder la referencia a un bloque reservado sin liberarlo. En servidores que corren 24/7, esto tumba el sistema.
+
 ---
- ```Consola
- 2   4   6
- ```
- Se crea la estructura nodo, luego se definen 3 punteros, (frente, segundo y tercero), se declaran los punteros con un casting o conversión explícita como una dirección a Nodo reservando dinámicamente el tamaño del nodo, luego se definen los valores dato de cada nodo y apuntan al siguiente nodo. Por último, se crea un puntero llamado n que es el primer nodo, como todos los nodos apuntan a un valor, n va a recorrer todos los valores imprimiendo el dato hasta que encuentre un nodo cuyo valor sea nulo.
+
+## Resumen Técnico
+- Los punteros dan poder absoluto sobre la memoria, con la responsabilidad absoluta de gestionarla.
+- `malloc` devuelve memoria "sucia" (con basura), `calloc` la devuelve limpia (ceros).
+- Entender punteros es el requisito previo para entender Estructuras de Datos.
+
+## Bibliografía
+- Deitel & Deitel - *C How to Program*.
+- Kernighan, B. W. - *The C Programming Language*.

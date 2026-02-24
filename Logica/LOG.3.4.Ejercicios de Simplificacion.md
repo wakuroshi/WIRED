@@ -76,7 +76,7 @@ Término medio M = Divisible entre 2
 Término mayor S = 180°
 Término menor P = Triángulo rectángulo
 Término medio M = Triángulo
-![[../Media/LOG.3.4.fb.png]]
+![[LOG.3.4.fb.png]]
 **Modo C**
 1) Ninguna matriz singular es invertible 
 2) Algunas matrices invertibles son triangulares

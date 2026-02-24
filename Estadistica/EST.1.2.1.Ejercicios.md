@@ -4,7 +4,7 @@ tags:
 ---
 # EST.1.2.1.Ejercicios
 
-#### [Teoria sobre las graficas estadisticas](<./EST.1.2.Graficas Estadisticas.md>)
+#### [Teoria sobre las graficas estadisticas](<EST.1.2.Graficas Estadisticas.md>)
 
 # 1. Ejercicio 
 
@@ -27,11 +27,11 @@ En la siguiente tabla se muestra los datos de pacientes con problemas dentales d
 
 ## 1.1. Respuesta 1 
 
-![Diagrama de Barras](../Media/EST.1.2.1.fa.png)
+![Diagrama de Barras](EST.1.2.1.fa.png)
 
 ## 1.2. Respuesta 2  
 
-![Diagrama de Torta](../Media/EST.1.2.1.fb.png)
+![Diagrama de Torta](EST.1.2.1.fb.png)
 
 De acuerdo a la gráfica obtenida, 181 pacientes de los 731 de la muestra presentan problemas de caries, con un 24,76% de incidencia, seguida por problemas de limpieza (24,49%) y extracción (18,88%), lo que indica que la población es recurrente en estos problemas dentales.
 
@@ -177,7 +177,7 @@ $F$ es la frecuencia absoluta acumulada
 | 6   | [45-54) | 45   | 54   | 2     | 25  | 49.5  |
 |     | Total   |      |      | 25    |     |       |
 
-![Histograma Salón A](../Media/EST.1.2.1.fc.png)
+![Histograma Salón A](EST.1.2.1.fc.png)
 
 ### 3.1.8. Promedio de los datos
 
@@ -241,7 +241,7 @@ $\text{\# de clases}=15$
 
 Y ya se tiene $x_{i}$ para todo elemento en la tabla, por lo que solo resta la gráfica
 
-![Histograma Salón A y Salón B](../Media/EST.1.2.1.fd.png)
+![Histograma Salón A y Salón B](EST.1.2.1.fd.png)
 
 ### 3.2.2. Promedio de los datos
 

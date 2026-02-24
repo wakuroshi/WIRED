@@ -3,7 +3,7 @@ tags:
   - Estadistica
 ---
 # 1.Ejercicios
-[Clase Medidas de Dispersión y Posición](<./EST.2.1.Medidas de Dispersion y Posicion>)
+[Clase Medidas de Dispersión y Posición](<EST.2.1.Medidas de Dispersion y Posicion.md>)
 # 1.1.Ejercicio 1
 Las calificaciones finales de mecánica de fluidos de n estudiantes son:
 $$\begin{matrix}

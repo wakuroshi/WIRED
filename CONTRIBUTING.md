@@ -55,7 +55,7 @@ git checkout -b añadido-logica
 
 ## 1.4. Realizar cambios y confirmarlos
 
-1. Edita o agrega tus archivos [Aqui mas informacion respecto al formato](./FORMATTING.md).  
+1. Edita o agrega tus archivos [Aqui mas informacion respecto al formato](FORMATTING.md).  
 2. Guarda tus cambios y agrégalos:
  
 ```bash

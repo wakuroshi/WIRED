@@ -1,6 +1,9 @@
 ---
-tags: 
-- docs
+materia: docs
+id: 0.0.FORMATTING
+tema: FORMATTING
+status: Terminado
+tags: [doc]
 ---
 
 # FORMATTING
@@ -13,8 +16,8 @@ Cada nota debe:
 
 - Estar en formato **.md** (markdown)
 - Comenzar con el **nombre de la nota en forma de Titulo** para facilitar la busqueda a traves de texto en archivos.
-- Luego, comenzar con un **Titulo princpal** (# x. Titulo)
-- Organizar el contenido con subtitulos jerarquicos (##x.y. Subtitulo, ###x.y.z Subtitulo 2, etc.)
+- Luego, comenzar con un **Titulo princpal** (**# x. Titulo**)
+- Organizar el contenido con subtitulos jerarquicos (**##x.y. Subtitulo**, **###x.y.z Subtitulo 2**, etc.)
 - Mantener coherencia visual con el resto de las notas.
 
 ## 1.1. Estructura de los archivos
@@ -34,26 +37,26 @@ Cada nota debe:
 
 Siguen una estructura igual a la de las notas, pero cambiando el Titulo por el descriptor (si es script o archivo media) y su localizacion (primer archivo de media, segundo, etc). ABC.x.y.z.**fa** o ABC.x.y.z.**sa**:
 
-- **fa**: El descriptor **f** hace referencia a *figura*, pero por simplicidad se utiliza para describir el hecho de que el archivo es de media (.png, .gif, .jpg, etc), la letra **a** se refiere a que es la primera *figura* dentro de esa nota, la b seria la segunda, c terca... Similar a como se hace referencia a diagramas en un libro de ciencias. Ej: [Interseccion](./Media/CALI.1.1.fc.png) *CALI.1.1.fc* hace referencia a que la imagen, que representa una Interseccion, esta en la nota **CALI.1.1** y es la **tercera figura** (fc) de esta nota.
+- **fa**: El descriptor **f** hace referencia a *figura*, pero por simplicidad se utiliza para describir el hecho de que el archivo es de media (.png, .gif, .jpg, etc), la letra **a** se refiere a que es la **primera figura** dentro de esa nota, la **b seria la segunda**, c tercera... Similar a como se hace referencia a diagramas en un libro de ciencias. Ej: [Interseccion](./Media/CALI.1.1.fc.png) *CALI.1.1.fc* hace referencia a que la imagen, que representa una Interseccion, esta en la nota **CALI.1.1** y es la **tercera figura** (fc) de esta nota.
 - **sa**: Exactamente igual al de media, pero el descriptor **s** indica que es un script, y la letra **a** indica que es el script **usado para generar la primera figura** de esa nota.
 
-> Nota: Por favor dejar un espacio en blanco de por medio entre una imagen y el texto que la rodea, asi la imagen se renderiza sin ningun error por tener el texto justo debajo.
+> Nota: Por favor dejar un espacio en blanco de por medio entre una imagen y el texto que la rodea, así la imagen se renderiza sin ningún error por tener el texto justo debajo.
 
-Ejemplo completo de una nota: [LOG.1.1.Logica](./Logica/LOG.1.1.Logica.md) 
+Ejemplo completo de una nota: [Este link te llevara a la nota ELE.1.1](<./Fundamentos de la Electronica/ELE.1.1.Magnitudes Fundamentales.md>)
 
 # 2. Estilo de escritura
 
 - Frases concisas, claras.  
 - No usar emojis ni adornos innecesarios, esto ayuda a mantener la compatibilidad del repositorio.  
 - Evitar el uso de primera persona.  
-- Usar **negritas** para resaltar conceptos o terminos importantes, e *italicas* para efectos secundarios.  
-- Evitar abusar del subrayado, italicas o negritas.  
-- No usar algun plugin externos de Obsidian que afecten a la nota, si se quiere insertar graficos, figuras o animaciones ilustrativas, se coloca en un formato soportado por la sintaxis nativa de markdown. Ej: Hacer la figura con Excalidraw, y se adjunta el png generado en la nota para mayor compatibilidad
+- Usar **negritas** para resaltar conceptos o términos importantes, e *italicas* para efectos secundarios.  
+- Evitar abusar del subrayado, itálicas o negritas.  
+- No usar algún plugin externos de Obsidian que afecten a la nota, si se quiere insertar gráficos, figuras o animaciones ilustrativas, se coloca en un formato soportado por la sintaxis nativa de markdown. Ej: Hacer la figura con Excalidraw, y se adjunta el png generado en la nota para mayor compatibilidad
 
-# 3. Formato matematico y logico
+# 3. Formato matemático y lógico
 
-- Escribir simbolos y formulas en formato LaTeX:  
-  - Inline: `$A \land B$`  
+- Escribir símbolos y formulas en formato LaTeX:  
+  - Inline: $A \land B$
   - En bloque:  
     
     $$
@@ -117,22 +120,37 @@ Explicacion...
 # 7. Convenciones recomendadas
 
 - Secciones en singular (`Regla`, `Ejemplo`, `Convención`) salvo que agrupen varios puntos.  
-- Cada nota debe ser autocontenida (Abordar el tema especificado).  
+- Cada nota debe ser auto-contenida (Abordar el tema especificado).  
 - Si una nota depende de otra, o se evita redundancia a algo ya explicado en otra nota, referenciar a la misma:
   ```markdown
   Ver también: [LOG.1.2.Operadores.md](LOG.1.2.Operadores.md)
   ```
+- Cambien otra forma es referenciar una nota en el párrafo de otra, así:
+  ```markdown
+  Para analizar un circuito ya conociendo [sus magnitudes](<./Fundamentos de la Electronica/ELE.1.1.Magnitudes Fundamentales.md>)...
+  ```
+
 
 # 8. Tags y metadata
 
-**WIP**, por ahora solo se incluye como metadata el nombre de la materia a la cual pertenece la nota, o su categoria (Index, docs) posteriormente se deberian ir generando mas. Ej:
 **Al inicio del archivo**:
 
 ```yaml
 ---
-tags: 
-- docs 
+materia: docs
+id: 0.0.FORMATTING
+tema: FORMATTING
+status: Terminado
+tags: [doc, etc]
 ---
 ```
 
-Al colocarse de esta manera la metadata no aparecera ni interferira al leerla en software como Obsidian o similares, siendo igualmente facil de editar y agrupar notas a traves de su metadata.
+Al colocarse de esta manera la metadata no aparecerá ni interferirá al leerla en software como Obsidian o similares, siendo igualmente fácil de editar y agrupar notas a través de su metadata.
+
+1. **materia**: La materia a la que pertenece la nota.
+2. **id**: La id de la nota (x.y.z)
+3. **tema**: Tema principal de la nota, no necesariamente aunque generalmente es el mismo titulo de la nota.
+4. **status**: Una nota puede estar en **Terminado** o en **Revisión**, si sientes inseguridad sobre una nota solo subela bajo el status de Revisión.
+
+
+La metadata "tags" es secundaria, solo funciona para navegar temas comunes entre distintas materias.

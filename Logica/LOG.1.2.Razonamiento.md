@@ -80,7 +80,7 @@ Un cuadrado se parte en 4 cuadros, uno de los cuadrados se parte en otros 4 cuad
 **D)** 387
 **E)** 761
 
-![Figura del Ejemplo](../Media/LOG.1.2.fa.png)
+![Figura del Ejemplo](LOG.1.2.fa.png)
 
 Se sigue la secuencia:
 

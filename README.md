@@ -1,13 +1,13 @@
 # WIRED
 
-Repositorio de apuntes para estudiantes de Ingenieria en Computacion/CS. Iniciado con el fin principal del aprendizaje en el uso de Git, y la colaboracion entre estudiantes.
+Repositorio de apuntes para estudiantes de Ingeniería en Computación. Iniciado con el fin principal del aprendizaje en el uso de Git, y la colaboración entre estudiantes.
 
 ## Contenido
 
-- **Apuntes organizados** por materias.
-- **Ejemplos y ejercicios** en multiples contenidos.  
+- **Apuntes organizados** por materias, con metadata.
+- **Ejemplos y ejercicios** en múltiples contenidos.  
 - **Recursos educativos** con referencias externas y cruzadas (internas).
-- **Formato nativo** con sintaxis markdown basica, para su facil lectura y edicion en editores.
+- **Formato nativo** con sintaxis markdown básica, para su fácil lectura y edición en editores.
 
 ## Estructura Principal
 
@@ -15,10 +15,10 @@ Repositorio de apuntes para estudiantes de Ingenieria en Computacion/CS. Iniciad
 WIRED/
 ├── Estadistica/
 ├── Estructuras-Logicas/
-├── Fundamentos-Electronica/
+├── Fundamentos de la Electronica/
 ├── Logica/
-└── Programacion/
-    └──Java/
+├── Programacion/
+└── Media/  
 ```
 
 ## Comenzar

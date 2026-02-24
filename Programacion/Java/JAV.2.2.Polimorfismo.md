@@ -1,75 +1,76 @@
 ---
+materia: Programación Java
+id: JAV.2.2
+tema: Polimorfismo, Sobrecarga y Sobreescritura
+status: Revision
 tags:
-  - Programacion/Java
-  - Programacion
+  - java
+  - oop
+  - polymorphism
+  - dynamic-binding
 ---
-# 1. Sobreescritura
-Se le llama sobreescritura al usarse en la clase hija un mismo método que en la clase padre, el método posee el mismo nombre que el de la clase padre, pero se sobreescritura (denotado con @Override) y permite que se modifique el comportamiento del método en la clase hija. **Ejemplo:**
-```java
-class CalculadoraBase{
-  public int sumar(int a, int b){
-    System.out.println("Base: Usando suma estandar de la calculadora base: ");
-    return a+b;
-    }
-}
 
-class CalculadoraAvanzada extends CalculadoraBase{
-//sobreescritura
-  @Override
-  public int sumar(int a, int b){
-    System.out.println("Avanzado: Usando suma optimizada de la calculadora avanzada");
-    return a + b + 10;
-  }
-}
-//Fin de sobreescritura
+# JAV.2.2. Polimorfismo y Enlace Dinámico
+
+> [!abstract]- Múltiples formas, un solo contrato
+> El polimorfismo permite que una referencia de una superclase pueda apuntar a objetos de cualquiera de sus subclases. Es la base del diseño modular: permite escribir código que interactúe con una abstracción (ej. `Forma`) sin conocer la implementación específica (ej. `Circulo` o `Cuadrado`) hasta el tiempo de ejecución.
+
+# 1. Sobreescritura vs. Sobrecarga
+
+Para un ingeniero, la diferencia radica en el **tiempo (Timing)** en que la JVM resuelve el método.
+
+## 1.1. Sobrecarga (Overloading) - Estático
+- **Ocurre en**: Tiempo de compilación.
+- **Definición**: Métodos con mismo nombre pero distinta firma (parámetros).
+```java
+public int sumar(int a, int b) { return a + b; }
+public double sumar(double a, double b) { return a + b; }
 ```
 
-# 2.Sobrecarga
-Se le llama sobrecarga al uso de un mismo método en una clase, pero con diferentes parámetros (tanto el tipo de dato como la cantidad de parámetros) lo que permite que un mismo método pueda realizar distintas funciones dependiendo de los parámetros que se tienen. **Ejemplo:**
+## 1.2. Sobreescritura (Overriding) - Dinámico
+- **Ocurre en**: Tiempo de ejecución (Runtime).
+- **Definición**: Redefinir un método de la superclase en la subclase.
 ```java
-class CalculadoraBase{
-//Sobrecarga
-  public int sumar(int a, int b){
-    System.out.println("Base: Usando suma estandar de la calculadora base: ");
-    return a+b;
-  }
-  public double sumar(double a, double b){
-    return a+b;
-  }
-}
-//Fin de Sobrecarga
+@Override // Obligatorio para validación del compilador
+public double calcularSalario() { ... }
 ```
-## 2.1. Ejemplo completo:
+
+# 2. El Enlace Dinámico (Dynamic Binding)
+
+Es el mecanismo por el cual la JVM decide qué método ejecutar basándose en el **tipo del objeto real** en el Heap, no en el tipo de la referencia.
+
 ```java
-class CalculadoraBase{
-//Sobrecarga
-  public int sumar(int a, int b){
-    System.out.println("Base: Usando suma estandar de la calculadora base: ");
-    return a+b;
-  }
-  public double sumar(double a, double b){
-    return a+b;
-  }
-}
-//Fin de Sobrecarga
-
-class CalculadoraAvanzada extends CalculadoraBase{
-//sobreescritura
-  @Override
-  public int sumar(int a, int b){
-    System.out.println("Avanzado: Usando suma optimizada de la calculadora avanzada");
-    return a + b + 10;
-  }
-//Fin de sobreescritura
-}
-
-public class overloading{
-  public static void main(String[] args) {
-    CalculadoraBase base=new CalculadoraBase();
-    CalculadoraAvanzada avanzada=new CalculadoraAvanzada();
-    System.out.println(base.sumar(5,4));
-    System.out.println(avanzada.sumar(5,4));
-  }
-}
-
+Empleado e = new Desarrollador(); 
+e.trabajar(); // Ejecutará la versión de Desarrollador, no la de Empleado.
 ```
+
+
+
+# 3. Casting de Objetos y RTTI
+
+- **Upcasting**: (Automático) Tratar a un hijo como padre. Siempre seguro.
+- **Downcasting**: (Manual) Tratar a un padre como hijo. Requiere verificar con `instanceof`.
+
+```java
+if (e instanceof Desarrollador) {
+    Desarrollador d = (Desarrollador) e; 
+    d.programar();
+}
+```
+
+> [!question]- Pattern Matching (Java 16+)
+> Modernamente, Java permite simplificar el casting en una sola línea:
+> `if (e instanceof Desarrollador d) { d.programar(); }`
+> Esto reduce errores de `ClassCastException`.
+
+---
+
+## Resumen
+
+- **Flexibilidad**: El polimorfismo permite que el código sea extensible sin modificar el núcleo (Principio Open/Closed).
+- **Contratos**: La referencia define qué métodos puedes llamar; el objeto real define cómo se ejecutan.
+- **Rendimiento**: La búsqueda del método en la tabla virtual (VTable) en runtime tiene un costo mínimo frente a la flexibilidad que aporta.
+
+## Bibliografía
+1. Gamma, E., et al. (1994). *Design Patterns: Elements of Reusable Object-Oriented Software*.
+2. Oracle. (2023). *Java Documentation: Polymorphism*.

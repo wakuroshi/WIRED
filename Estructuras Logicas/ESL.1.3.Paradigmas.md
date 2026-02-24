@@ -1,99 +1,158 @@
 ---
+materia: Estructuras Lógicas
+id: ESL.1.3
+tema: Paradigmas de Programación
+status: Revision
 tags:
   - EstructurasLogicas
+  - paradigmas
+  - OOP
+  - funcional
+  - estructurada
 ---
-# ESL.1.3.Paradigmas
-# 1. Paradigmas de Programacion
-Un paradigma de programacion es un estilo fundamental para construir programas de computadora. Define como los programadores organizan el codigo y resuelven problemas.
 
-## 1.1. Programacion Estructurada
-La programacion estructurada se basa en la organizacion del codigo en bloques logicos mediante funciones y procedimientos. Su principio fundamental es dividir programas complejos en partes mas pequenas y manejables.
+# ESL.1.3. Paradigmas de Programación
 
-**Caracteristicas principales:**
+> [!abstract] Modelos de Pensamiento
+> Un paradigma no es un lenguaje, es una forma de razonar sobre la solución de un problema. Define cómo se estructura el código, cómo se manipulan los datos y cómo se gestiona el estado del programa.
 
-- Uso de tres estructuras de control: secuencia, seleccion, iteracion
-- Datos y funciones separados
-- Evitar el uso de GOTO
-- Facil depuracion y mantenimiento
+---
 
-**Ejemplo en C:**
+# 1. Definición y Clasificación
 
+Un paradigma impone reglas sobre lo que el programador **puede** y **no puede** hacer. Curiosamente, los paradigmas más avanzados (como Funcional) restringen más al programador que los primitivos (como Ensamblador), lo que paradójicamente resulta en software más robusto.
+
+### 1.1. Imperativo vs Declarativo
+- **Imperativo (C, Assembly):** Le dices a la máquina **CÓMO** hacer las cosas, paso a paso ("Mueve este dato aquí, suma esto, salta allá").
+- **Declarativo (SQL, HTML):** Le dices a la máquina **QUÉ** quieres obtener, sin especificar los pasos internos.
+
+# 2. Programación Estructurada (La base de C)
+
+Nace con el **Teorema de Böhm-Jacopini** (1966), que demostró que cualquier algoritmo puede escribirse usando solo tres estructuras de control, eliminando la necesidad del caótico `GOTO`.
+
+### 2.1. Las Tres Estructuras
+1.  **Secuencia:** Ejecución lineal de instrucciones.
+2.  **Selección:** Decisiones lógicas (`if`, `switch`).
+3.  **Iteración:** Bucles (`for`, `while`).
+
+### 2.2. Modularidad
+El problema se divide en funciones pequeñas y reutilizables.
+- **Ventaja:** Fácil de entender y depurar.
+- **Desventaja:** Los datos suelen ser globales o pasarse constantemente entre funciones, lo que dificulta la seguridad en sistemas grandes.
+
+**Ejemplo en C (Cálculo de Factorial):**
 ```c
 #include <stdio.h>
 
-// Funcion que calcula el factorial
 int factorial(int n) {
-    int resultado = 1;
-    for (int i = 1; i <= n; i++) {
-        resultado *= i;
+    int res = 1;
+    for (int i = 1; i <= n; i++) { // Iteración
+        res *= i; // Secuencia
     }
-    return resultado;
+    return res;
+}
+````
+
+# 3. Programación Orientada a Objetos (POO)
+
+Surge para controlar la complejidad. En lugar de tener lógica y datos separados, se unen en una entidad llamada **Objeto**. _Nota de Ingeniería:_ C no tiene objetos nativos, pero se pueden simular usando `structs` y punteros a funciones.
+
+### 3.1. Los 4 Pilares Fundamentales
+
+1. **Encapsulamiento:** Proteger los datos internos. El objeto controla quién modifica sus variables.
+    
+2. **Abstracción:** Mostrar solo lo esencial. El usuario del objeto no necesita saber cómo funciona por dentro.
+    
+3. **Herencia:** Crear nuevas clases basadas en otras existentes (Reutilización de código).
+    
+4. **Polimorfismo:** Capacidad de tratar objetos de diferentes clases de manera uniforme (ej. tratar a un `Círculo` y un `Cuadrado` como `Figura`).
+    
+
+### 3.2. Simulación de Objeto en C (Structs)
+
+Aunque C no tiene `class`, así es como los ingenieros crean objetos en sistemas operativos (como Linux):
+
+C
+
+```
+// Definición de la "Clase"
+typedef struct Coche {
+    int velocidad;        // Atributo
+    void (*acelerar)(struct Coche*); // "Método" (Puntero a función)
+} Coche;
+
+// Implementación del método
+void acelerar_impl(Coche *this) {
+    this->velocidad += 10;
 }
 
+// Uso
 int main() {
-    int numero = 5;
-    int fact = factorial(numero);
-    printf("Factorial de %d es %d\n", numero, fact);
+    Coche miAuto;
+    miAuto.velocidad = 0;
+    miAuto.acelerar = acelerar_impl; // Enlace
+    
+    miAuto.acelerar(&miAuto); // Llamada al método
     return 0;
 }
 ```
 
-## 1.2. Programacion Orientada a Objetos
+# 4. Programación Funcional
 
-La programacion orientada a objetos modela el software como una coleccion de objetos que interactuan entre si. Cada objeto encapsula datos y comportamientos relacionados.
+Trata la computación como la evaluación de funciones matemáticas puras. Evita el **Estado Mutable** (variables que cambian de valor).
 
-### 1.2.1. Los cuatro pilares fundamentales:
+### 4.1. Conceptos Clave
 
-- **Abstraccion**: Simplificar la realidad extrayendo caracteristicas esenciales
-- **Encapsulamiento**: Ocultar los detalles internos de implementacion
-- **Herencia**: Crear nuevas clases basadas en clases existentes
-- **Polimorfismo**: Objetos de diferentes tipos que responden al mismo mensaje
-
-**Ejemplo:**
-
-```java
-public class Vehiculo {
-    private String marca;
-    private int velocidad;
+- **Inmutabilidad:** Una vez creada una variable, no se puede cambiar. Si quieres modificar algo, creas una copia nueva.
     
-    public void acelerar() {
-        velocidad += 10;
-    }
+- **Funciones Puras:** Para una misma entrada, siempre devuelven la misma salida y no tienen "efectos secundarios" (no tocan variables globales ni imprimen en pantalla).
+    
+- **Funciones de Orden Superior:** Funciones que pueden recibir otras funciones como parámetros (Callbacks).
+    
+
+### 4.2. Ejemplo Conceptual en C (Punteros a Función)
+
+
+```C
+void operar(int a, int b, int (*funcion)(int, int)) {
+    printf("Resultado: %d\n", funcion(a, b));
+}
+
+int suma(int a, int b) { return a + b; }
+
+int main() {
+    operar(5, 3, suma); // Pasamos la función como dato
+    return 0;
 }
 ```
 
-## 1.3. Programacion Funcional
+# 5. Comparativa Técnica
 
-La programacion funcional trata la computacion como la evaluacion de funciones matematicas, evitando el cambio de estado y los datos mutables.
-
-**Principios clave:**
-
-- Funciones como ciudadanos de primera clase
-- Inmutabilidad de datos
-- Ausencia de efectos secundarios
-- Composicion de funciones
-
-# 2. Comparacion entre Paradigmas
-
-|Aspecto	|Programacion Estructurada	|Programacion Orientada a Objetos|
-|-|-|-|
-|Enfoque	|Procedimientos y funciones	|Objetos y sus interacciones|
-|Datos	|Separados del comportamiento	|Integrados en objetos|
-|Reutilizacion	|Funciones y bibliotecas	|Herencia y composicion|
-|Modelado|	Basado en procesos|	Basado en entidades del mundo real|
-
-## 2.1. Cuando usar cada paradigma:
-
-- **Estructurada**: Sistemas embebidos, programas de sistema, aplicaciones de rendimiento critico
-- **Orientada a Objetos**: Sistemas empresariales, interfaces graficas, aplicaciones complejas
-
-- **Funcional**: Procesamiento de datos, sistemas concurrentes, aplicaciones matematicas
+|Característica|Estructurada|Orientada a Objetos|Funcional|
+|---|---|---|---|
+|**Unidad base**|Función|Objeto (Clase)|Función Pura|
+|**Datos**|Separados de la lógica|Encapsulados con lógica|Inmutables|
+|**Estado**|Mutable (Variables)|Mutable (Propiedades)|Inmutable|
+|**Ejecución**|Secuencial|Interacción de mensajes|Evaluación matemática|
+|**Uso Ideal**|Sistemas Embebidos, Drivers|Sistemas Grandes, UI|Concurrencia, Datos|
 
 ---
 
-#Resumen
+## Resumen Técnico
 
-La programacion estructurada organiza el codigo en funciones y usa control de flujo lineal. 
-La orientada a objetos modela sistemas mediante objetos con datos y comportamiento. 
-La programacion funcional se basa  en funciones matematicas inmutables. 
-Cada paradigma es adecuado para diferentes tipos de problemas y contextos de desarrollo.
+- **Estructurada:** Divide y vencerás. Ideal para control de bajo nivel.
+    
+- **POO:** Modela el mundo real. Ideal para gestionar sistemas complejos con muchas entidades.
+    
+- **Funcional:** Minimiza errores de estado. Ideal para procesamiento de datos paralelo donde la mutabilidad causa bugs.
+    
+- C es un lenguaje **multiparadigma** (Imperativo por defecto, pero permite simular POO y Funcional mediante punteros).
+    
+
+## Bibliografía
+
+- ESL.1.3.Paradigmas.md (Apuntes originales).
+    
+- Stroustrup, B. - _The C++ Programming Language_ (Historia de paradigmas).
+    
+- Martin, R. C. - _Clean Architecture_.

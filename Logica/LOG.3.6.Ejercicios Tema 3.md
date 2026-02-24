@@ -71,7 +71,7 @@ Para $F = ((p \lor q) \land r)$:
 $p\rightarrow \neg q \lor p$
 escribir la fórmula con paréntesis, construir el árbol de análisis y determinar todas sus subfórmulas
 **Árbol de análisis**
-![Árbol de análisis](LOG.3.6.FA.png)
+![Árbol de análisis](LOG.3.6.fa.png)
 **Paréntesis**
 	$(p\rightarrow (\neg q \lor p))$
 **Subfórmulas**
